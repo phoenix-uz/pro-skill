@@ -1,0 +1,19 @@
+@import '../../../assets/styles/_variables'
+@import '../../../assets/styles/_mixins'
+.btn
+    background: map-get($primary, 'primary')
+    border-radius: map-get($border, '40')
+    +typography(20px, 500, map-get($basic, 'white'))
+    border: 2px solid map-get($primary, 'primary' )
+    padding: 12px 40px
+    transition: all 0.5s ease
+    cursor: pointer
+.yellow
+    border: 2px solid map-get($primary, 'yellow')
+    background: transparent
+    color: map-get($primary, '#FFFFFF')
+    transform: perspective(1px) translateZ(0)
+    transition: 0.4s
+    &:hover
+        background: map-get($primary, 'yellow')
+        color: map-get($basic, 'black')
