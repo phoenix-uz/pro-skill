@@ -1,0 +1,23 @@
+@import '../../assets/styles/_variables'
+@import '../../assets/styles/_mixins'
+.topBanner
+    position: fixed
+    top: 0
+    width: 100%
+    padding: 14px 0
+    background: map-get($primary, 'primary')
+    text-align: center
+    z-index: 101
+    .topLink
+        display: flex
+        justify-content: center
+        align-items: center
+        column-gap: 5px
+        text-decoration: none
+        +typography(18px, 300, map-get($basic, 'white'))
+        @media screen and (max-width: 640px)
+            font-size: 15px
+        @media screen and (max-width: 420px)
+            font-size: 12px
+        .star
+            color: map-get($primary, 'yellow')

@@ -1,0 +1,40 @@
+@import '../../../assets/styles/_variables'
+@import '../../../assets/styles/_mixins'
+.libraryItem
+    border: 1px solid map-get($neutral, 'gray')
+    border-radius: 10px
+    padding: 14px
+    .itemContent
+        .topContent
+            border-bottom: 1px solid map-get($neutral, 'gray')
+            .contentText
+                text-align: center
+                .text
+                    +typography(16px, 700, map-get($basic, 'black'))
+            .contentImage
+                .img
+                    width: 100%
+        .bottomContent
+            .contentTotal
+                display: flex
+                align-items: center
+                column-gap: 8px
+                .totalIcon
+                    i
+                        font-size: 24px
+                        color: map-get($primary, 'primary')
+                .totalNumber
+                    .number
+                        +typography(16px, 500, map-get($basic, 'black'))
+            .contentBtn
+                .btn
+                    font-size: 16px
+                    width: 100%
+        .cardInfo
+            margin-bottom: 20px
+            .infoTitle
+                .title
+                    +typography(16px, 500, map-get($neutral, 'lightGray'))
+            .infoText
+                .text
+                    +typography(14px, 500, map-get($neutral, 'lightGray'))

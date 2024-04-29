@@ -1,0 +1,28 @@
+@import '../../assets/styles/_mixins'
+@import '../../assets/styles/_variables'
+.paymnerPage
+    .paymentPageContainer
+        .paymentBox
+            padding: 50px 0
+            .paymentText
+                .text
+                    +typography(25px, 400, map-get($basic, 'black'))
+            .payment
+                padding: 10px 0
+                .paymentTitle
+                    +typography(25px, 700, map-get($basic, 'black'))
+                .paymentBtns
+                    display: flex
+                    flex-direction: column
+                    row-gap: 10px
+                    padding: 10px 0
+                    .links
+                        max-width: 250px
+                        width: 100%
+                        border: 2px solid transparent
+                        transition: 0.5s ease
+                        border-radius: 20px
+                        &:hover
+                            border: 2px dashed map-get($primary, 'yellow')
+                        .img
+                            border-radius: 20px

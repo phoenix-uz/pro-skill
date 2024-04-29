@@ -1,0 +1,29 @@
+@import '../../../assets/styles/_variables'
+@import '../../../assets/styles/_mixins'
+.dropdown
+    position: relative
+    border: 1px solid map-get($neutral, 'gray')
+    border-radius: 10px
+    .dropdownBtnContainer
+        .dropdownBtn
+            padding: 20px 16px
+            border: none
+            outline: none
+            background: none
+            cursor: pointer
+            display: flex
+            flex-direction: row
+            align-items: center
+            column-gap: 8px
+            +typography(14px, 400, map-get($basic, "black"))
+            .activeIcon
+                transform: rotate(90deg)
+    .dropdownMenu
+        position: absolute
+        background: map-get($basic, 'white')
+        border: 1px solid map-get($neutral, 'gray')
+        border-radius: 10px
+        width: 100%
+        margin-top: 10px
+        .menuContainer
+            padding: 20px 16px

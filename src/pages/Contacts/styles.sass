@@ -1,0 +1,49 @@
+@import '../../assets/styles/_mixins'
+@import '../../assets/styles/_variables'
+.contactsPage
+    .contactsPageContainer
+        .contactsPageItems
+            margin: 20px 0
+            display: flex
+            justify-content: center
+            align-items: center
+            column-gap: 50px
+            @media screen and (max-width: 865px)
+                flex-direction: column-reverse
+            .contactForm
+                width: 100%
+                &::after
+                    border: 20px solid map-get($basic, 'white')
+                .form
+                    border: 1px solid map-get($neutral, 'lightGray')
+                    @media screen and (max-width: 991px)
+                        padding: 25px
+            .contactsMessangers
+                display: flex
+                align-items: center
+                column-gap: 30px
+                .messangersTitle
+                    .title
+                        +typography(20px, 300, map-get($basic, 'black'))
+                .messangers
+                    display: flex
+                    column-gap: 10px
+                    .icon
+                        text-decoration: none
+                        width: 40px
+                        height: 40px
+                        border: 2px solid map-get($neutral, 'lightGray')
+                        border-radius: 6px
+                        i
+                            height: 100%
+                            display: flex
+                            font-weight: 700
+                            justify-content: center
+                            align-items: center
+                            margin: auto
+                            color: map-get($primary, 'primary')
+            .contactItem
+                margin: 20px 0
+                .itemImage
+                    .img
+                        width: 100%

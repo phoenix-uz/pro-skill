@@ -1,0 +1,115 @@
+@import '../../assets/styles/_mixins'
+@import '../../assets/styles/_variables'
+.coursesPage
+    .coursesPageContainer
+        .coursesInfo
+            padding: 50px 0
+            .infoContainer
+                padding: 50px
+                display: flex
+                flex-direction: column
+                row-gap: 30px
+                .coursesHeader
+                    .headerTitle
+                        .title
+                            +typography(24px, 700, map-get($basic, 'black'))
+                            @media screen and (max-width: 865px)
+                                font-size: 20px
+                            @media screen and (max-width: 420px)
+                                font-size: 18px
+                    .headerSubtitle
+                        .subtitle
+                            margin: 0
+                            +typography(18px, 400, map-get($neutral, 'lightGray'))
+                            @media screen and (max-width: 865px)
+                                font-size: 16px
+                            @media screen and (max-width: 420px)
+                                font-size: 14px
+                .coursesBody
+                    display: flex
+                    column-gap: 30px
+                    .imageBox
+                        .img
+                            width: 100%
+                .coursesFooter
+                    display: flex
+                    justify-content: space-between
+                    align-items: center
+                    .footerDuration
+                        .duration
+                            +typography(18px, 400, map-get($neutral, 'lightGray'))
+                            @media screen and (max-width: 865px)
+                                font-size: 16px
+                            @media screen and (max-width: 420px)
+                                font-size: 14px
+                    .teacherName
+                        .name
+                            +typography(24px, 700, map-get($basic, 'black'))
+                            @media screen and (max-width: 865px)
+                                font-size: 20px
+                            @media screen and (max-width: 420px)
+                                font-size: 18px
+        .coursesList
+            padding-bottom: 50px
+            .listContainer
+                display: flex
+                flex-wrap: wrap
+                justify-content: center
+                column-gap: 30px
+                row-gap: 20px
+                border-radius: 6px
+                .listItems
+                    border: 1px solid map-get($neutral, 'gray')
+                    padding: 24px 30px
+                    display: flex
+                    align-items: center
+                    @media screen and (max-width: 520px)
+                        flex-direction: column
+                    .listHeading
+                        .listTitle
+                            .title
+                                +typography(20px, 500, map-get($basic, 'black'))
+                        .listSubtitle
+                            .subtitle
+                                +typography(18px, 400, map-get($neutral, 'lightGray'))
+                    .listDuration
+                        display: flex
+                        align-items: center
+                        column-gap: 5px
+                        background: #F7F7F8
+                        .durationIcon
+                            i
+                                +typography(18px, 400, map-get($neutral, 'lightGray'))
+                        .durationText
+                            .text
+                                margin: 0
+                                +typography(18px, 400, map-get($neutral, 'lightGray'))
+        .coursesCards
+            display: flex
+            align-items: center
+            column-gap: 30px
+            padding-bottom: 50px
+            @media screen and (max-width: 865px)
+                flex-direction: column
+                row-gap: 30px
+            .libraryItem
+                .contentImage
+                    height: 380px
+                    .img
+                        height: 100%
+            .contentText
+                display: flex
+                justify-content: space-between
+                align-items: center
+                .listDuration
+                    display: flex
+                    align-items: center
+                    column-gap: 5px
+                    background: #F7F7F8
+                    .durationIcon
+                        i
+                            +typography(18px, 400, map-get($neutral, 'lightGray'))
+                    .durationText
+                        .text
+                            margin: 0
+                            +typography(18px, 400, map-get($neutral, 'lightGray'))

@@ -1,0 +1,74 @@
+@import '../../../assets/styles/_variables'
+@import '../../../assets/styles/_mixins'
+.contactForm
+    position: relative
+    width: 50%
+    background: repeating-conic-gradient(from var(--a), #D5D52B 0%, #D5D52B 10%, transparent 10%, transparent 50%)
+    animation: animate 6s linear infinite
+    padding: 50px
+    border-radius: 15px
+    @media screen and (max-width: 991px)
+        width: 100%
+    @media screen and (max-width: 614px)
+        padding: 20px
+    &::before
+        content: ''
+        position: absolute
+        inset: 0
+        background: repeating-conic-gradient(from var(--a), #D5D52B 0%, #D5D52B 10%, transparent 10%, transparent 50%)
+        animation: animate 6s linear infinite
+        border-radius: 15px
+    &::after
+        content: ''
+        position: absolute
+        inset: 4px
+        border: 20px solid map-get($primary, 'primary')
+        background: map-get($basic, 'white')
+        border-radius: 15px
+    .formTitle
+        text-align: center
+        .title
+            +typography(32px, 700, map-get($primary, 'primary'))
+    .formSubtitle
+        text-align: center
+        .subtitle
+            +typography(16px, 300, map-get($primary, 'primary'))
+    .form
+        background: map-get($basic, 'white')
+        padding: 50px
+        position: relative
+        border-radius: 15px
+        z-index: 1
+        @media screen and (max-width: 614px)
+            padding: 20px
+        .inputBox
+            position: relative
+            width: 100%
+            margin-top: 20px
+            input,
+            textarea
+                width: 100%
+                padding: 5px 0
+                margin: 10px 0
+                border: none
+                background: transparent
+                border-bottom: 2px solid map-get($primary, 'primary')
+                color: map-get($basic, 'black')
+                outline: none
+                resize: none
+                &:focus ~ span,
+                &:valid ~ span
+                    color: map-get($primary, 'yellow')
+                    transform: translateY(-24px)
+            span
+                position: absolute
+                left: 0
+                pointer-events: none
+                padding: 5px 0
+                margin: 10px 0
+                color: map-get($basic, 'black')
+                transition: 0.5s
+        .formBtn
+            align-items: center
+            .btn
+                width: 100%

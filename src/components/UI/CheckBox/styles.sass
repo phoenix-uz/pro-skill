@@ -1,0 +1,93 @@
+@import '../../../assets/styles/_variables'
+@import '../../../assets/styles/_mixins'
+
+.checkboxLabel
+    display: flex
+    flex-direction: row-reverse
+    align-items: center
+    justify-content: flex-end
+    position: relative
+    column-gap: 12px
+    cursor: pointer
+    &:hover
+        .checkbox
+            &::after
+                width: 40px
+                height: 40px
+                background: transparentize(map-get($neutral, "gray"), 0.9)
+
+        .checkboxInput:checked ~ .checkbox
+            &::after
+                background: transparentize(map-get($primary, "primary"), 0.9)
+
+        .checkboxInput:focus ~ .checkbox
+            &::after
+                background: transparentize(map-get($neutral, "gray"), 0.8)
+
+        .checkboxInput:focus:checked ~ .checkbox
+            &::after
+                background: transparentize(map-get($primary, "primary"), 0.8)
+
+        .checkboxInput:active ~ .checkbox
+            &::after
+                background: transparentize(map-get($neutral, "gray"), 0.7)
+
+        .checkboxInput:active:checked ~ .checkbox
+            &::after
+                background: transparentize(map-get($primary, "primary"), 0.7)
+    .checkboxText
+        +typography(14px, 400, map-get($basic, "black"))
+    .checkbox
+        position: relative
+        width: 20px
+        height: 20px
+        border-radius: 2.57px
+        border: 1.8px solid map-get($neutral, "gray")
+        cursor: pointer
+        display: flex
+        justify-content: center
+        align-items: center
+        @media screen and (max-width: 1024px)
+            width: 30px
+        @media screen and (max-width: 940px)
+            width: 20px
+        &::before
+            content: ""
+            width: 10px
+            height: 6px
+            border-left: 2px solid map-get($basic, "white")
+            border-bottom: 2px solid map-get($basic, "white")
+            border-radius: 2px
+            transform: rotate(-45deg) translate(1.5px, -1px)
+            transform-origin: center
+            opacity: 0
+        &::after
+            content: ""
+            border-radius: 50%
+            z-index: -1
+            position: absolute
+            top: 50%
+            left: 50%
+            width: 0
+            height: 0
+            transform: translate(-50%, -50%)
+            transition: all 0.2s ease 0s
+    .checkboxInput
+        opacity: 0
+        width: 0.1px
+        height: 0.1px
+        position: absolute
+        margin: 0
+        &:checked ~ .checkbox
+            border-color: map-get($primary, "primary")
+            background-color: map-get($primary, "primary")
+            &::before
+                opacity: 1
+        &:disabled ~ .checkbox
+            border-color: map-get($neutral, "gray")
+        &:disabled:checked ~ .checkbox
+            border-color: map-get($neutral, "gray")
+            background-color: map-get($neutral, "gray")
+            &::before
+                opacity: 1
+                border-color: map-get($neutral, "lightGray")
