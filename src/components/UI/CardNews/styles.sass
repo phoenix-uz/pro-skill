@@ -1,0 +1,28 @@
+@import '../../../assets/styles/_variables'
+@import '../../../assets/styles/_mixins'
+.cardNews
+    background: map-get($basic, 'white')
+    border-radius: 12px
+    border: 1px solid map-get($neutral, 'gray')
+    .cardNewsContainer
+        display: flex
+        gap: 20px
+        padding: 10px
+        @media screen and (max-width: 640px)
+            flex-direction: column
+        .cardImage
+            max-width: 340px
+            width: 100%
+            display: flex
+            .img
+                width: 100%
+        .cardInfo
+            .infoTitle
+                .title
+                    +typography(16px, 500, map-get($basic, 'black'))
+            .infoText
+                .text
+                    +typography(14px, 400, map-get($neutral, 'lightGray'))
+            .infoBtn
+                .btn
+                    width: 150px

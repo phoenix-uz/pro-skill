@@ -1,0 +1,57 @@
+@import '../../../assets/styles/_variables'
+@import '../../../assets/styles/_mixins'
+.testCard
+    display: flex
+    justify-content: center
+    align-items: center
+    .cardContainer
+        border-radius: 20px
+        padding: 25px
+        background: map-get($basic, 'white')
+        border-radius: 20px
+        max-width: 586px
+        width: 100%
+        .cardHeader
+            display: flex
+            align-items: center
+            justify-content: space-between
+            .pageNumber
+                .number
+                    +typography(24px, 400, map-get($basic, 'black'))
+                    .current
+                        color: map-get($primary, 'secondary')
+            .closeBtn
+                position: relative
+                width: 40px
+                height: 40px
+                background: transparent
+                cursor: pointer
+                &::before,
+                &::after
+                    content: ''
+                    width: 2px
+                    height: 100%
+                    position: absolute
+                    top: 0
+                    left: 0
+                    right: 0
+                    margin: auto
+                    display: block
+                    background: map-get($basic, 'black')
+                    border-radius: 6px
+                &::before
+                    transform: rotate(-45deg)
+                &::after
+                    transform: rotate(45deg)
+    .cardBody
+        .bodyImage
+            .img
+                width: 100%
+        .bodyTest
+            .testTitle
+                border-radius: 12px
+                background: #F4F4F4
+                margin-bottom: 20px
+                .title
+                    padding: 20px
+                    +typography(16px, 500, #474747)

@@ -1,0 +1,15 @@
+@import '../../../assets/styles/_variables'
+@import '../../../assets/styles/_mixins'
+.rights
+    display: flex
+    align-items: center
+    justify-content: center
+    column-gap: 10px
+    margin-top: 50px
+    padding: 30px 0
+    border-top: 1px solid map-get($neutral, 'lightGray')
+    .rightsText
+        .text
+            +typography(18px, 300, map-get($basic, 'white'))
+            @media screen and (max-width: 420px)
+                font-size: 16px

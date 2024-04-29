@@ -1,0 +1,203 @@
+@import './_mixins'
+@import './_variables'
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap')
+*
+    font-family: 'Space Grotesk'
+*,
+::before,
+::after
+    box-sizing: border-box
+html, body
+    margin: 0
+    padding: 0
+    background-color: map-get($basic, "white")
+    scroll-behavior: smooth
+html
+    overflow-x: hidden
+body
+    overflow: hidden
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+    margin: 0
+
+.sectionTitleBlack
+    text-align: center
+    .title
+        +typography(32px, 700, map-get($basic, 'black'))
+        @media screen and (max-width: 865px)
+            font-size: 24px
+.sectionTitleWhite
+    text-align: center
+    .title
+        +typography(32px, 700, map-get($basic, 'white'))
+        @media screen and (max-width: 865px)
+            font-size: 24px
+::-webkit-scrollbar
+    width: 10px
+
+::-webkit-scrollbar-track
+    background: map-get($basic, 'white')
+
+::-webkit-scrollbar-thumb
+    border-radius: 6px
+    background: #fffb00
+    transition: all 0.5s ease
+    &:hover
+        background: map-get($neutral, 'lightGray')
+
+.container
+    max-width: 1270px
+    width: 100%
+    margin: 0 auto
+    @media screen and (max-width: 1350px)
+        max-width: 1100px
+        padding: 0 40px
+    @media screen and (max-width: 1110px)
+        max-width: 991px
+    @media screen and (max-width: 640px)
+        max-width: 520px
+        padding: 0 15px
+
+@keyframes galaxy
+    0%
+        rotate: 0deg
+    100%
+        rotate: 360deg
+@keyframes galaxy2
+    0%
+        rotate: 360deg
+    100%
+        rotate: 0deg
+
+@property --a
+    syntax: '<angle>'
+    inherits: false
+    initial-value: 0deg
+@keyframes  animate
+    0%
+        --a: 0deg
+    100%
+        --a: 360deg
+
+@-webkit-keyframes move
+    from 
+    transform: translate(-100px, -50px) rotate(-90deg)
+    border-radius: 24% 76% 35% 65% / 27% 36% 64% 73%
+    filter: blur(0px)
+    50%
+    transform: translate(800px, 25px) rotate(-50deg)
+    border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%
+    filter: blur(0px)
+    to 
+    transform: translate(1000px, 100px) rotate(-10deg)
+    border-radius: 76% 24% 33% 67% / 68% 55% 45% 32%
+    filter: blur(30px)
+@keyframes move
+    from
+        transform: translate(-100px, -50px) rotate(-90deg)
+        border-radius: 24% 76% 35% 65% / 27% 36% 64% 73%
+        filter: blur(0px)
+    50%
+        transform: translate(800px, 25px) rotate(-50deg)
+        border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%
+        filter: blur(0px)
+    to
+        transform: translate(1000px, 100px) rotate(-10deg)
+        border-radius: 76% 24% 33% 67% / 68% 55% 45% 32%
+        filter: blur(30px)
+@-webkit-keyframes introMove
+    from 
+    transform: translate(-100px, -50px) rotate(-90deg)
+    border-radius: 24% 76% 35% 65% / 27% 36% 64% 73%
+    to 
+    transform: translate(1000px, 100px) rotate(-10deg)
+    border-radius: 76% 24% 33% 67% / 68% 55% 45% 32%
+@keyframes introMove
+    from
+        transform: translate(-100px, -50px) rotate(-90deg)
+        border-radius: 24% 76% 35% 65% / 27% 36% 64% 73%
+    to
+        transform: translate(1000px, 100px) rotate(-10deg)
+        border-radius: 76% 24% 33% 67% / 68% 55% 45% 32%
+@-webkit-keyframes second
+  from 
+    transform: translate(-150px, -150px) rotate(-100deg)
+    border-radius: 24% 76% 35% 65% / 27% 36% 64% 73%
+    filter: blur(0px)
+    50%
+    transform: translate(800px, 25px) rotate(-50deg)
+    border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%
+    filter: blur(0px)
+  to 
+    transform: translate(1200px, 200px) rotate(-10deg)
+    border-radius: 76% 24% 33% 67% / 68% 55% 45% 32%
+    filter: blur(30px)
+@keyframes second
+    from
+        transform: translate(-150px, -150px) rotate(-100deg)
+        border-radius: 24% 76% 35% 65% / 27% 36% 64% 73%
+        filter: blur(0px)
+    50%
+        transform: translate(800px, 25px) rotate(-50deg)
+        border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%
+        filter: blur(0px)
+    to
+        transform: translate(1200px, 200px) rotate(-10deg)
+        border-radius: 76% 24% 33% 67% / 68% 55% 45% 32%
+        filter: blur(30px)
+@-webkit-keyframes third
+  from 
+    transform: translate(-150px, -150px) rotate(-100deg)
+    border-radius: 24% 76% 35% 65% / 27% 36% 64% 73%
+    filter: blur(0px)
+    50%
+    transform: translate(500px, 25px) rotate(-50deg)
+    border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%
+    filter: blur(0px)
+  to 
+    transform: translate(800px, 50px) rotate(-10deg)
+    border-radius: 76% 24% 33% 67% / 68% 55% 45% 32%
+    filter: blur(30px)
+@keyframes third
+    from
+        transform: translate(-150px, -150px) rotate(-100deg)
+        border-radius: 24% 76% 35% 65% / 27% 36% 64% 73%
+        filter: blur(0px)
+    50%
+        transform: translate(500px, 25px) rotate(-50deg)
+        border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%
+        filter: blur(0px)
+    to
+        transform: translate(800px, 50px) rotate(-10deg)
+        border-radius: 76% 24% 33% 67% / 68% 55% 45% 32%
+        filter: blur(10px)
+@-webkit-keyframes forth
+  from 
+    transform: translate(-150px, -150px) rotate(-100deg)
+    border-radius: 24% 76% 35% 65% / 27% 36% 64% 73%
+    filter: blur(0px)
+    50%
+    transform: translate(950px, 25px) rotate(-50deg)
+    border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%
+    filter: blur(0px)
+  to 
+    transform: translate(1000px, 50px) rotate(-10deg)
+    border-radius: 76% 24% 33% 67% / 68% 55% 45% 32%
+    filter: blur(15px)
+@keyframes forth
+    from
+        transform: translate(-150px, -150px) rotate(-100deg)
+        border-radius: 24% 76% 35% 65% / 27% 36% 64% 73%
+        filter: blur(0px)
+    50%
+        transform: translate(950px, 25px) rotate(-50deg)
+        border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%
+        filter: blur(0px)
+    to
+        transform: translate(1000px, 50px) rotate(-10deg)
+        border-radius: 76% 24% 33% 67% / 68% 55% 45% 32%
+        filter: blur(15px)

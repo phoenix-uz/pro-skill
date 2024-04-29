@@ -1,0 +1,47 @@
+@import '../../assets/styles/_variables'
+@import '../../assets/styles/_mixins'
+.library
+    padding-bottom: 50px
+    .sectionTitleBlack
+        margin-bottom: 40px
+    .libraryItems
+        display: flex
+        column-gap: 32px
+        justify-content: space-between
+        @media screen and (max-width: 1350px)
+            column-gap: 16px
+        @media screen and (max-width: 991px)
+            flex-wrap: wrap
+            row-gap: 16px
+        @media screen and (max-width: 865px)
+            justify-content: center
+        // .libraryItem
+        //     border: 1px solid map-get($neutral, 'gray')
+        //     border-radius: 10px
+        //     padding: 14px
+        //     .itemContent
+        //         .topContent
+        //             border-bottom: 1px solid map-get($neutral, 'gray')
+        //             .contentText
+        //                 text-align: center
+        //                 .text
+        //                     +typography(16px, 700, map-get($basic, 'black'))
+        //             .contentImage
+        //                 .img
+        //                     width: 100%
+        //         .bottomContent
+        //             .contentTotal
+        //                 display: flex
+        //                 align-items: center
+        //                 column-gap: 8px
+        //                 .totalIcon
+        //                     i
+        //                         font-size: 24px
+        //                         color: map-get($primary, 'primary')
+        //                 .totalNumber
+        //                     .number
+        //                         +typography(16px, 500, map-get($basic, 'black'))
+        //             .contentBtn
+        //                 .btn
+        //                     font-size: 16px
+        //                     width: 100%

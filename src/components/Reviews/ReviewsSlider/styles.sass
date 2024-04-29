@@ -1,0 +1,50 @@
+@import '../../../assets/styles/_variables'
+@import '../../../assets/styles/_mixins'
+.reviewsSlider
+    padding: 20px 0
+    .swiper-pagination
+        bottom: -4px
+        .swiper-pagination-bullet
+            opacity: 1
+            background: map-get($basic, 'white')
+        .swiper-pagination-bullet-active
+            background: map-get($primary, 'yellow')
+    .sliderContainer
+        max-width: 500px
+        width: 100%
+        margin: 20px
+        @media screen and (max-width: 865px)
+            margin: 0
+    .sliderMessage
+        background: map-get($primary, 'secondary')
+        border: 1px solid map-get($neutral, 'lightGray')
+        border-radius: 30px 0px 30px 0
+        padding: 10px
+        .messageText
+            .text
+                +typography(18px, 300, map-get($basic, 'white'))
+                @media screen and (max-width: 865px)
+                    font-size: 16px
+    .sliderBottomItems
+        display: flex
+        justify-content: space-between
+        align-items: center
+        width: 100%
+        margin-top: 20px
+        .itemInfo
+            .infoTitle
+                .title
+                    +typography(18px, 300, map-get($basic, 'white'))
+                    @media screen and (max-width: 865px)
+                        font-size: 16px
+            .infoSubtitle
+                .subTitle
+                    margin: 0
+                    +typography(16px, 300, map-get($neutral, 'lightGray'))
+                    @media screen and (max-width: 865px)
+                        font-size: 14px
+        .itemStars
+            display: flex
+            .star
+                i
+                    color: #ffea00
