@@ -1,0 +1,97 @@
+
+@import '../../assets/styles/_variables'
+@import '../../assets/styles/_mixins'
+
+.contactsBlock
+    background: map-get($primary, 'primary')
+    padding: 50px 0
+    .contactsBlockContainer
+        display: flex
+        justify-content: space-between
+        align-items: center
+        width: 100%
+        @media screen and (max-width: 991px)
+            flex-direction: column
+            row-gap: 50px
+        .content
+            width: 50%
+            @media screen and (max-width: 991px)
+                width: 100%
+            .contentTitle
+                .title
+                    +typography(32px, 700, map-get($basic, 'white'))
+            .contentText
+                .text
+                    +typography(14px, 300, map-get($basic, 'white'))
+            .box
+                width: 100%
+                display: flex
+                flex-direction: column
+                margin-top: 30px
+                .contactInfo
+                    width: 50%
+                    display: flex
+                    flex-direction: column
+                    @media screen and (max-width: 991px)
+                        width: 100%
+                    .infoBox
+                        position: relative
+                        padding: 20px 0
+                        display: flex
+                        align-items: center
+                        cursor: pointer
+                        .icon
+                            position: relative
+                            min-width: 60px
+                            height: 60px
+                            background: repeating-conic-gradient(from 27.5deg, #D5D52B 0%, #D5D52B 10%, transparent 10%, transparent 50%)
+                            display: flex
+                            justify-content: center
+                            align-items: center
+                            &::before
+                                content: ''
+                                position: absolute
+                                inset: 0
+                                background: repeating-conic-gradient(from 117.5deg, #D5D52B 0%, #D5D52B 10%, transparent 10%, transparent 50%)
+                            &::after
+                                content: ''
+                                position: absolute
+                                inset: 2px
+                            i
+                                padding: 15px
+                                inset: 8px
+                                background: map-get($primary, 'primary')
+                                z-index: 2
+                                color: map-get($basic, 'white')
+                    .contactInfoTitle
+                        position: relative
+                        display: flex
+                        flex-direction: column
+                        margin-left: 20px
+                        .title
+                            +typography(18px, 500, map-get($basic, 'white'))
+                            @media screen and (max-width: 1200px)
+                                font-size: 18px
+            .contactsMessangers
+                display: flex
+                align-items: center
+                column-gap: 30px
+                .messangersTitle
+                    .title
+                        +typography(20px, 300, map-get($basic, 'white'))
+                .messangers
+                    display: flex
+                    column-gap: 10px
+                    .icon
+                        text-decoration: none
+                        width: 40px
+                        height: 40px
+                        border: 2px solid map-get($primary, 'yellow')
+                        border-radius: 6px
+                        i
+                            height: 100%
+                            display: flex
+                            justify-content: center
+                            align-items: center
+                            margin: auto
+                            color: map-get($basic, 'white')

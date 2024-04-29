@@ -1,0 +1,51 @@
+@import '../../assets/styles/_variables'
+@import '../../assets/styles/_mixins'
+.ourApproach
+    padding: 70px 0
+    .ourApproachContainer
+        display: flex
+        flex-direction: column
+        row-gap: 30px
+        .ourApproachBox
+            display: flex
+            flex-direction: column
+        .imageBox
+            position: relative
+            .img
+                width: 100%
+            .mainHeading
+                position: absolute
+                background: map-get($basic, 'white')
+                padding: 10px
+                top: 0
+                right: 0
+                border-bottom-left-radius: map-get($border, '20')
+                .heading
+                    +typography(32px, 500, map-get($basic, 'black'))
+                    @media screen and (max-width: 865px)
+                        font-size: 24px
+                    @media screen and (max-width: 575px)
+                        font-size: 20px
+                    @media screen and (max-width: 420px)
+                        font-size: 16px
+                    .primary
+                        color: map-get($primary, 'primary')
+        .boxHeading
+            .heading
+                +typography(30px, 500, map-get($neutral, 'lightGray'))
+                text-transform: uppercase
+                @media screen and (max-width: 865px)
+                    font-size: 24px
+                @media screen and (max-width: 575px)
+                    font-size: 20px
+                @media screen and (max-width: 420px)
+                    font-size: 16px
+        .boxText
+            .text
+                +typography(20px, 400, map-get($neutral, 'lightGray'))
+                @media screen and (max-width: 865px)
+                    font-size: 18px
+                @media screen and (max-width: 575px)
+                    font-size: 16px
+                @media screen and (max-width: 420px)
+                    font-size: 14px

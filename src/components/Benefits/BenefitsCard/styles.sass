@@ -1,0 +1,75 @@
+@import '../../../assets/styles/_variables'
+@import '../../../assets/styles/_mixins'
+// .benefitsCard
+//     border-radius: map-get($border, '20')
+//     background: map-get($primary, 'secondary')
+//     .cardContent
+//         display: flex
+//         flex-direction: column
+//         row-gap: 10px
+//         padding: 30px
+        // .cardIcon
+        //     i
+        //         font-size: 20px
+        //         color: map-get($primary, 'yellow')
+        // .cardTitle
+        //     .title
+        //         +typography(24px, 500, map-get($basic, 'white'))
+        // .cardText
+        //     .text
+        //         margin: 0
+        //         +typography(16px, 400, map-get($basic, 'white'))
+.benefitsCard
+    background-color: transparent
+    width: 300px
+    height: 300px
+    perspective: 1000px
+    border-radius: map-get($border, '20')
+    background: transparent
+    cursor: pointer
+    .benefitsCardInner
+        position: relative
+        width: 100%
+        height: 100%
+        text-align: center
+        transition: transform 0.6s
+        transform-style: preserve-3d
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2)
+    &:hover
+        .benefitsCardInner
+            transform: rotateY(180deg)
+    .flipCardFront, .flipCardBack
+        position: absolute
+        width: 100%
+        height: 100%
+        -webkit-backface-visibility: hidden
+        backface-visibility: hidden
+        display: flex
+        align-items: flex-start
+        flex-direction: column
+        row-gap: 10px
+        justify-content: center
+        padding: 20px
+        .cardIcon
+            i
+                font-size: 20px
+                color: map-get($primary, 'yellow')
+        .cardTitle
+            .title
+                +typography(24px, 500, map-get($basic, 'white'))
+        .cardText
+            text-align: start
+            .text
+                margin: 0
+                +typography(16px, 400, map-get($basic, 'white'))
+    .flipCardFront
+        border-radius: map-get($border, '20')
+        background: map-get($primary, 'secondary')
+    .flipCardBack
+        padding: 20px
+        display: flex
+        justify-content: center
+        align-items: center
+        border-radius: map-get($border, '20')
+        background: map-get($primary, 'secondary')
+        transform: rotateY(180deg)

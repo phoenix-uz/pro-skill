@@ -1,0 +1,102 @@
+@import '../../assets/styles/_variables'
+@import '../../assets/styles/_mixins'
+.intro
+    padding: 50px 0
+    background-image: url('../../assets/images/intoBg.webp')
+    background-repeat: no-repeat
+    background-position: center
+    .blob
+        position: absolute
+        width: 50px
+        height: 50px
+        background: linear-gradient( 180deg, #d1ff0367 31.77%, #d1ff0363 100%)
+        mix-blend-mode: color-dodge
+        transition: 1s cubic-bezier(0.07, 0.8, 0.16, 1)
+        z-index: 20
+        filter: blur(30px)
+        cursor: pointer
+        &.first
+            -webkit-animation: introMove 15s infinite alternate
+            animation: introMove 15s infinite alternate
+    .intoContainer
+        display: flex
+        align-items: center
+        width: 100%
+        @media screen and (max-width: 865px)
+            flex-direction: column
+        .introItems
+            width: 60%
+            display: flex
+            flex-direction: column
+            row-gap: 15px
+            @media screen and (max-width: 865px)
+                width: 100%
+            @media screen and (max-width: 865px)
+                align-items: center
+            .introHeading
+                .heading
+                    +typography(42px, 700, map-get($basic, 'white'))
+                    @media screen and (max-width: 991px)
+                        font-size: 32px
+                    @media screen and (max-width: 420px)
+                        font-size: 24px
+                    .introLogo
+                        color: map-get($primary, 'yellow')
+                @media screen and (max-width: 865px)
+                    text-align: center
+            .introSubtitle
+                .subtitle
+                    +typography(18px, 400, #53ff98c8)
+                    max-width: 500px
+                    width: 100%
+                    @media screen and (max-width: 991px)
+                        font-size: 16px
+                        max-width: 400px
+                    @media screen and (max-width: 865px)
+                        max-width: 100%
+                    @media screen and (max-width: 420px)
+                        font-size: 14px
+                @media screen and (max-width: 865px)
+                    text-align: center
+            .totalAmount
+                display: flex
+                .totalAmountContainer
+                    display: flex
+                    column-gap: 20px
+                    position: relative
+                    .total
+                        margin: 5px
+                        display: flex
+                        flex-direction: column
+                        align-items: center
+                        .totalNumber
+                            +typography(48px, 400, map-get($basic, 'white'))
+                            @media screen and (max-width: 991px)
+                                font-size: 32px
+                            @media screen and (max-width: 420px)
+                                font-size: 24px
+                        .text
+                            +typography(16px, 400, map-get($basic, 'white'))
+                            @media screen and (max-width: 991px)
+                                font-size: 14px
+                    .line
+                        &::after
+                            content: ''
+                            display: block
+                            position: absolute
+                            width: 2px
+                            height: 70%
+                            top: 0
+                            bottom: 0
+                            right: -65px
+                            left: 0
+                            margin: auto
+                            color: map-get($basic, 'white')
+                            background: map-get($basic, 'white')
+
+        .introBanner
+            display: flex
+            justify-content: center
+            width: 40%
+            @media screen and (max-width: 865px)
+                width: 100%

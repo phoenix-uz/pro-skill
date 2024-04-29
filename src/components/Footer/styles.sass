@@ -1,0 +1,60 @@
+@import '../../assets/styles/_variables'
+@import '../../assets/styles/_mixins'
+.footer
+    padding: 100px 0 0
+    background: map-get($primary, 'primary')
+    .footerContainer
+        .footerItems
+            display: flex
+            justify-content: space-between
+            column-gap: 10px
+            @media screen and (max-width: 865px)
+                flex-wrap: wrap
+            @media screen and (max-width: 420px)
+                flex-direction: column
+                row-gap: 20px
+        .footerItem
+            display: flex
+            flex-direction: column
+            .footerLogo
+                .logo
+                    text-decoration: none
+                    +typography(20px, 500, map-get($primary, 'yellow'))
+                    @media screen and (max-width: 991px)
+                        font-size: 16px
+            .footerText
+                .text
+                    +typography(18px, 300, map-get($basic, 'white'))
+                    @media screen and (max-width: 991px)
+                        font-size: 14px
+            .itemTitle
+                .title
+                    +typography(20px, 500, map-get($basic, 'white'))
+                    @media screen and (max-width: 991px)
+                        font-size: 16px
+            .footerIcons
+                display: flex
+                column-gap: 10px
+                .icon
+                    text-decoration: none
+                    i
+                        font-size: 20px
+                        color: map-get($basic, 'white')
+                        @media screen and (max-width: 991px)
+                            font-size: 16px
+            .itemLinks
+                display: flex
+                flex-direction: column
+                .link
+                    text-decoration: none
+                    margin-top: 16px
+                    +typography(18px, 300, map-get($basic, 'white'))
+                    @media screen and (max-width: 991px)
+                        font-size: 14px
+                .linkBox
+                    display: flex
+                    column-gap: 10px
+                    align-items: center
+                    .linkText
+                        .text
+                            margin: 0
