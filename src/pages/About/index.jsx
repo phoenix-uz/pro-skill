@@ -4,7 +4,6 @@ import PagesIntro from "../../components/UI/PagesIntro";
 import AboutCard from "../../components/UI/AboutCard";
 import cardAboutInfo from "../../assets/images/cardAboutInfo.png";
 import Achivements from "../../components/Achievements";
-import videoAbout from "../../assets/video/001.mp4";
 
 const AboutPage = () => {
   return (
@@ -28,7 +27,7 @@ const AboutPage = () => {
             className='videoAbout'
           >
             <source
-              src={videoAbout}
+              src='https://proskill-academy.com/video/002.mp4'
               type='video/mp4'
             />
           </video>
