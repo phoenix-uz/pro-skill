@@ -3,9 +3,9 @@ import "./styles.sass";
 
 const BenefitsCard = ({ icon, title, text }) => {
   return (
-    <div class='benefitsCard'>
-      <div class='benefitsCardInner'>
-        <div class='flipCardFront'>
+    <div className='benefitsCard'>
+      <div className='benefitsCardInner'>
+        <div className='flipCardFront'>
           <div className='cardIcon'>
             <i className={icon}></i>
           </div>
@@ -16,7 +16,7 @@ const BenefitsCard = ({ icon, title, text }) => {
             <p className='text'>{text}</p>
           </div>
         </div>
-        <div class='flipCardBack'>
+        <div className='flipCardBack'>
           <div className='cardText'>
             <p className='text'>{text}</p>
           </div>

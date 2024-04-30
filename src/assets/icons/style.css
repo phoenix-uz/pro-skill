@@ -88,6 +88,9 @@
 .icon-star-full:before {
   content: "\e9d9";
 }
+.icon-search:before {
+  content: "\e986";
+}
 .icon-arrow-right2:before {
   content: "\ea3c";
 }

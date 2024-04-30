@@ -6,7 +6,7 @@ const Search = () => {
   return (
     <div className='search'>
       <div className='searchIcon'>
-        <i className='icon-Play'></i>
+        <i className='icon-search'></i>
       </div>
       <Input
         className='inputSearch'
