@@ -6,11 +6,13 @@ import Footer from "./components/Footer";
 import TopBanner from "./components/TopBanner";
 import "./assets/styles/global.sass";
 import ScrollToTop from "./router/skrollToTop";
+import { ToastContainer } from "react-toastify";
 
 
 const App = () => {
   return (
       <BrowserRouter>
+      <ToastContainer />
         <TopBanner/>
         <Header/>
           <ScrollToTop/>

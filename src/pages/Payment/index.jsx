@@ -5,6 +5,7 @@ import PagesIntro from "../../components/UI/PagesIntro";
 import { Link } from "react-router-dom";
 import payme from "../../assets/images/payme.png";
 import click from "../../assets/images/click.png";
+import Button from "../../components/UI/Button";
 
 const PaymentPage = () => {
   return (
@@ -50,6 +51,7 @@ const PaymentPage = () => {
                     className='img'
                   />
                 </Link>
+                <Button>Ball bilan sotib oling</Button>
               </div>
             </div>
           </div>

@@ -2,18 +2,25 @@ import React, { useState } from "react";
 import "./styles.sass";
 import Checkbox from "../CheckBox";
 
-const DropdownWithSelect = () => {
+const DropdownWithSelect = ({ selectedOptions, setSelectedOptions }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [selectedOption, setSelectedOption] = useState("");
 
   const handleDropdownToggle = () => {
     setIsOpen(!isOpen);
   };
 
   const handleOptionChange = (event) => {
-    setSelectedOption(event.target.value);
-    setIsOpen(false);
+    if (event.target.checked) {
+      const arr = [...selectedOptions, event.target.value];
+      setSelectedOptions(arr);
+    } else {
+      const arr = selectedOptions.filter((item) => item !== event.target.value);
+      setSelectedOptions(arr);
+    }
   };
+  function isChecked(value) {
+    return selectedOptions.includes(value);
+  }
 
   return (
     <div className='dropdown'>
@@ -23,12 +30,12 @@ const DropdownWithSelect = () => {
           className='dropdownBtn'
         >
           <div className='dropdownIcon'>
-            <i className='icon-Play'></i>
+            <i className='icon-Notebook'></i>
           </div>
 
           {isOpen ? "Ball boyicha filtrlash" : "Ball boyicha filtrlash"}
           <div className={`dropdownIcon ${isOpen ? "activeIcon" : ""}`}>
-            <i className='icon-Play'></i>
+            <i className='icon-arrow-right2'></i>
           </div>
         </button>
       </div>
@@ -39,22 +46,34 @@ const DropdownWithSelect = () => {
             <Checkbox
               htmlFor='10'
               id='10'
-              text='10-20 Ball'
+              option='10-20 Ball'
+              value='10,20'
+              onChange={(event) => handleOptionChange(event)}
+              isChecked={isChecked("10,20")}
             />
             <Checkbox
               htmlFor='20'
               id='20'
-              text='20-30 Ball'
+              option='20-30 Ball'
+              value='20,30'
+              isChecked={isChecked("20,30")}
+              onChange={(event) => handleOptionChange(event)}
             />
             <Checkbox
               htmlFor='30'
               id='30'
-              text='30-40 Ball'
+              option='30-40 Ball'
+              value='30,40'
+              isChecked={isChecked("30,40")}
+              onChange={(event) => handleOptionChange(event)}
             />
             <Checkbox
               htmlFor='40'
               id='40'
-              text='40 va koproq Ball'
+              value='40,10000000000000'
+              option="40 va ko'proq Ball"
+              isChecked={isChecked("40,10000000000000")}
+              onChange={(event) => handleOptionChange(event)}
             />
           </div>
         </div>

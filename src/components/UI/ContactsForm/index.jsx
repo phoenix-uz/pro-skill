@@ -1,13 +1,12 @@
 import React, { useState } from "react";
 import Button from "../Button";
 import { useDispatch, useSelector } from "react-redux";
-import { addSms } from "../../../store/userReducer";
 import { IMaskInput } from "react-imask";
 import "./styles.sass";
+import { addSms } from "../../../store/mainSlice";
 
 const ContactsForm = () => {
   const dispatch = useDispatch();
-  // const { isSuccess } = useSelector((state) => state.user);
   const [formData, setFormData] = useState({ name: "", surname: "", phone_number: "", sms: "" });
   const phoneMask = "+998 (00) 000-00-00";
   const Mask = [

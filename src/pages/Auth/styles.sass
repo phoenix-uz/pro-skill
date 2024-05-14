@@ -1,0 +1,48 @@
+@import '../../assets/styles/_mixins'
+@import '../../assets/styles/_variables'
+.authPage
+    height: 100vh
+    display: flex
+    justify-content: center
+    align-items: center
+    position: relative
+    width: 100%
+    .authPageContainer
+        display: flex
+        align-items: flex-start
+        justify-content: space-between
+        width: 100%
+        .authPageImage,
+        .tabsBlock
+            width: 50%
+        .authPageImage
+            display: flex
+            flex-direction: column
+            align-items: center
+            .text
+                margin-bottom: -100px
+                +typography(32px, 700, map-get($basic, 'black'))
+            .img
+            @media screen and (max-width: 1350px)
+                min-height: 630px
+                height: 100%
+                .img
+                    width: 100%
+                .text
+                    margin: 0
+            @media screen and (max-width: 991px)
+                display: none
+        .tabsBlock
+            .css-8atqhb
+                .css-1gsv261
+                    border-radius: 20px
+                    background: #8EA488
+                    .css-heg063-MuiTabs-flexContainer
+                        justify-content: center
+                        padding: 20px 0
+                        .css-1h9z7r5-MuiButtonBase-root-MuiTab-root.Mui-selected
+                            color: map-get($basic, 'white')
+                    .css-1aquho2-MuiTabs-indicator
+                        background-color: map-get($basic, 'white')
+            @media screen and (max-width: 991px)
+                width: 100%

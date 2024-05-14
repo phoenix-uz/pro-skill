@@ -1,5 +1,6 @@
-
 import AboutPage from "../pages/About";
+import AuthPage from "../pages/Auth";
+import OtpForm from "../pages/Auth/OtpForm";
 import ContactsPage from "../pages/Contacts";
 import CoursesPage from "../pages/Courses";
 import LibraryPage from "../pages/Library";
@@ -14,7 +15,8 @@ export const linksGroup = [
     {id:4, path:'/news', component: <NewsPage/>},
     {id:5, path:'/about', component: <AboutPage/>},
     {id:6, path:'/contacts', component: <ContactsPage/>},
-    // {id:7, path:'/registration', component: <RegistrationPage/>},
-    // {id:8, path:'/auth', component: <AuthPage/>},
     {id:7, path:'/test', component: <PaymentPage/>},
+    {id:8, path:'/auth', component: <AuthPage/>},
+    {id:9, path:'/otp', component: <OtpForm/>},
+    {id:10, path:'/payment', component: <PaymentPage/>},
 ]

@@ -5,12 +5,6 @@
     justify-content: center
     align-items: center
     .cardContainer
-        border-radius: 20px
-        padding: 25px
-        background: map-get($basic, 'white')
-        border-radius: 20px
-        max-width: 586px
-        width: 100%
         .cardHeader
             display: flex
             align-items: center
@@ -35,8 +29,8 @@
                     top: 0
                     left: 0
                     right: 0
-                    margin: auto
                     display: block
+                    margin: auto
                     background: map-get($basic, 'black')
                     border-radius: 6px
                 &::before
@@ -55,3 +49,31 @@
                 .title
                     padding: 20px
                     +typography(16px, 500, #474747)
+        .btn
+            width: 100%
+            margin-top: 30px
+.testFinishCard
+    .cardContainer
+        .cardHeader
+            justify-content: flex-end
+    .cardBody
+        .bodyImage
+            display: flex
+            align-items: center
+            justify-content: center
+    .cardTitle
+        text-align: center
+    .cardText
+        text-align: center
+    .cardTextFinishBox
+        border: 1px solid map-get($neutral, 'gray')
+        border-radius: 10px
+        .boxTextContainer
+            padding: 10px
+            .boxTitle
+                text-align: center
+                .title
+                    +typography(16px, 700, map-get($basic, 'black'))
+            .boxText
+                .text
+                    +typography(16px, 400, map-get($neutral, 'lightGray'))

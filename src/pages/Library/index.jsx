@@ -1,166 +1,84 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
+import { fetchLibraryWithItemsData } from "../../store/libraryWithItemsSlice";
+import { ReactReduxContext, useDispatch, useSelector } from "react-redux";
 import PagesIntro from "../../components/UI/PagesIntro";
 import Quote from "../../components/UI/Quote";
 import Button from "../../components/UI/Button";
-import library from "../../assets/images/library.png";
 import DropdownWithSelect from "../../components/UI/Dropdown";
 import Search from "../../components/UI/Search";
 import LibraryCard from "../../components/UI/LibraryCard";
-import PDFimg from "../../assets/images/pdf.png";
-import Video from "../../assets/images/video.png";
-import Audio from "../../assets/images/audio.png";
+import LibraryImage from "../../assets/images/library.png";
 import "./styles.sass";
-import { useDispatch, useSelector } from "react-redux";
-import { getLibrary } from "../../store/userReducer";
+import { fetchProfileData } from "../../store/profileSlice";
+import { fetchSearchData } from "../../store/searchSlice";
 
 const LibraryPage = () => {
-  const users = useSelector((state) => state.users);
   const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(getLibrary());
-  }, []);
-  console.log("data", users.user);
 
-  const libraryBooksItems = [
-    {
-      id: 1,
-      image: library,
-      text: "Bleyz",
-      total: { icon: "icon-Soundwave", number: "222 sahifalar" },
-      infoTitle: "Stiven King",
-      infoText:
-        "Learn the fundamentals of web design, including HTML, CSS, and responsive design principles. Develop the skills .",
-    },
-    {
-      id: 2,
-      image: library,
-      text: "Bleyz",
-      total: { icon: "icon-Notebook", number: "222 sahifalar" },
-      infoTitle: "Stiven King",
-      infoText:
-        "Learn the fundamentals of web design, including HTML, CSS, and responsive design principles. Develop the skills .",
-    },
-    {
-      id: 3,
-      image: library,
-      text: "Bleyz",
-      total: { icon: "icon-Folder-With-Files", number: "222 sahifalar" },
-      infoTitle: "Stiven King",
-      infoText:
-        "Learn the fundamentals of web design, including HTML, CSS, and responsive design principles. Develop the skills .",
-    },
-    {
-      id: 4,
-      image: library,
-      text: "Bleyz",
-      total: { icon: "icon-Play", number: "222 sahifalar" },
-      infoTitle: "Stiven King",
-      infoText:
-        "Learn the fundamentals of web design, including HTML, CSS, and responsive design principles. Develop the skills .",
-    },
-  ];
-  const libraryFdfsItems = [
-    {
-      id: 1,
-      image: PDFimg,
-      text: "Boshqaruv maslahatlar",
-      total: { icon: "icon-Soundwave", number: "27 sahifalar" },
-      infoText:
-        "Learn the fundamentals of web design, including HTML, CSS, and responsive design principles. Develop the skills .",
-    },
-    {
-      id: 2,
-      image: PDFimg,
-      text: "Boshqaruv maslahatlar",
-      total: { icon: "icon-Notebook", number: "27 sahifalar" },
-      infoText:
-        "Learn the fundamentals of web design, including HTML, CSS, and responsive design principles. Develop the skills .",
-    },
-    {
-      id: 3,
-      image: PDFimg,
-      text: "Boshqaruv maslahatlar",
-      total: { icon: "icon-Folder-With-Files", number: "27 sahifalar" },
-      infoText:
-        "Learn the fundamentals of web design, including HTML, CSS, and responsive design principles. Develop the skills .",
-    },
-    {
-      id: 4,
-      image: PDFimg,
-      text: "Boshqaruv maslahatlar",
-      total: { icon: "icon-Play", number: "27 sahifalar" },
-      infoText:
-        "Learn the fundamentals of web design, including HTML, CSS, and responsive design principles. Develop the skills .",
-    },
-  ];
-  const libraryAudioItems = [
-    {
-      id: 1,
-      image: Audio,
-      text: "Audio HR maslahatlar",
-      total: { icon: "icon-Soundwave", number: "27 sahifalar" },
-      infoText:
-        "Learn the fundamentals of web design, including HTML, CSS, and responsive design principles. Develop the skills .",
-    },
-    {
-      id: 2,
-      image: Audio,
-      text: "Audio HR maslahatlar",
-      total: { icon: "icon-Notebook", number: "27 sahifalar" },
-      infoText:
-        "Learn the fundamentals of web design, including HTML, CSS, and responsive design principles. Develop the skills .",
-    },
-    {
-      id: 3,
-      image: Audio,
-      text: "Audio HR maslahatlar",
-      total: { icon: "icon-Folder-With-Files", number: "27 sahifalar" },
-      infoText:
-        "Learn the fundamentals of web design, including HTML, CSS, and responsive design principles. Develop the skills .",
-    },
-    {
-      id: 4,
-      image: Audio,
-      text: "Audio HR maslahatlar",
-      total: { icon: "icon-Play", number: "27 sahifalar" },
-      infoText:
-        "Learn the fundamentals of web design, including HTML, CSS, and responsive design principles. Develop the skills .",
-    },
-  ];
-  const libraryVideoItems = [
-    {
-      id: 1,
-      image: Video,
-      text: "Uoll Strit",
-      total: { icon: "icon-Soundwave", number: "27:00 minuta" },
-      infoText:
-        "Learn the fundamentals of web design, including HTML, CSS, and responsive design principles. Develop the skills .",
-    },
-    {
-      id: 2,
-      image: Video,
-      text: "Uoll Strit",
-      total: { icon: "icon-Notebook", number: "27:00 minuta" },
-      infoText:
-        "Learn the fundamentals of web design, including HTML, CSS, and responsive design principles. Develop the skills .",
-    },
-    {
-      id: 3,
-      image: Video,
-      text: "Uoll Strit",
-      total: { icon: "icon-Folder-With-Files", number: "27:00 minuta" },
-      infoText:
-        "Learn the fundamentals of web design, including HTML, CSS, and responsive design principles. Develop the skills .",
-    },
-    {
-      id: 4,
-      image: Video,
-      text: "Uoll Strit",
-      total: { icon: "icon-Play", number: "27:00 minuta" },
-      infoText:
-        "Learn the fundamentals of web design, including HTML, CSS, and responsive design principles. Develop the skills .",
-    },
-  ];
+  const [selectedOptions, setSelectedOptions] = useState([]);
+  const libraryPageData = useSelector((state) => state?.libraryWithItems?.data);
+  const status = useSelector((state) => state.libraryWithItems.status);
+  const error = useSelector((state) => state.libraryWithItems.error);
+  const isLogined = useSelector((state) => state.auth.isLogined);
+  const profileData = useSelector((state) => state?.profile?.profileData);
+  const searchData = useSelector((state) => state?.search?.data);
+  const [filterResult, setFilterResult] = useState([]);
+  const [filteredItems, setFilteredItems] = useState([]);
+
+  console.log(libraryPageData);
+
+  const filterByBookName = (index) => {
+    const filtered = libraryPageData[index].items;
+    setFilteredItems(filtered);
+  };
+
+  console.log(filteredItems);
+
+  useEffect(() => {
+    filterData();
+  }, [selectedOptions]);
+  useEffect(() => {
+    if (status === "idle") {
+      dispatch(fetchLibraryWithItemsData());
+      dispatch(fetchProfileData());
+      dispatch(fetchSearchData());
+    }
+  }, [status, dispatch]);
+
+  function filterData() {
+    let result = [];
+
+    libraryPageData.forEach((typeItem) => {
+      selectedOptions.forEach((option) => {
+        const borders = option.split(",");
+        result = result.concat(typeItem.items.filter((book) => book.price >= borders[0] && book.price <= borders[1]));
+      });
+    });
+    setFilterResult(result);
+  }
+
+  function renderBooks(books) {
+    return (
+      <div className='libraryBooksContainer'>
+        <div className='libraryItems'>
+          {books.map((item, index) => (
+            <LibraryCard
+              key={index}
+              image={!item.photoUrl ? LibraryImage : "http://185.217.131.110:5000/" + item.photoUrl}
+              alt={item.text}
+              contentText={item.title}
+              totalIcon='icon-Folder-With-Files'
+              totalNumber={`${item.length} sahifalar`}
+              btnText={!isLogined ? "Kutubhonaga otish" : `${item.price} ball`}
+              infoTitle={item.author}
+              infoText={item.subtitle}
+            />
+          ))}
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className='libraryPage'>
       <div className='container'>
@@ -174,99 +92,63 @@ const LibraryPage = () => {
           </PagesIntro>
           <div className='libraryHeader'>
             <div className='btnGroup'>
-              <Button className='secondary'>Kitoblar</Button>
-              <Button className='secondary'>PDF</Button>
-              <Button className='secondary'>Audio</Button>
-              <Button className='secondary'>Video</Button>
+              {libraryPageData?.map((item, index) => (
+                <Button
+                  className='secondary'
+                  onClick={() => filterByBookName(index)}
+                >
+                  {item?.name}
+                </Button>
+              ))}
             </div>
             <div>
-              <DropdownWithSelect />
+              {isLogined ? (
+                <DropdownWithSelect
+                  selectedOptions={selectedOptions}
+                  setSelectedOptions={setSelectedOptions}
+                />
+              ) : (
+                <></>
+              )}
             </div>
             <div>
               <Search />
             </div>
           </div>
           <div className='libraryBox'>
-            <div className='libraryBooksContainer'>
-              <div className='libraryItems'>
-                {libraryBooksItems.map((item, index) => (
-                  <LibraryCard
+            {searchData.length > 0
+              ? renderBooks(searchData)
+              : filteredItems.length > 0
+              ? renderBooks(filteredItems)
+              : filterResult.length > 0
+              ? renderBooks(filterResult)
+              : libraryPageData.map((typeItem, index) => (
+                  <div
+                    className='libraryBooksContainer'
                     key={index}
-                    image={item.image}
-                    alt={item.text}
-                    contentText={item.text}
-                    totalIcon={item.total.icon}
-                    totalNumber={item.total.number}
-                    btnText='Kutubhonaga otish'
-                    infoTitle={item.infoTitle}
-                    infoText={item.infoText}
-                  />
+                  >
+                    <div className='libraryItems'>
+                      {typeItem?.items?.slice(0, 4).map((item, index) => (
+                        <LibraryCard
+                          key={index}
+                          image={!item.photoUrl ? LibraryImage : "http://185.217.131.110:5000/" + item.photoUrl}
+                          alt={item.text}
+                          contentText={item.title}
+                          totalIcon='icon-Folder-With-Files'
+                          totalNumber={`${item.length} sahifalar`}
+                          btnText={!isLogined ? "Kutubhonaga otish" : `${item.price} ball`}
+                          infoTitle={item.author}
+                          infoText={item.subtitle}
+                        />
+                      ))}
+                    </div>
+                    {typeItem?.items?.length > 4 && (
+                      <div className='libraryBtn'>
+                        <Button onClick={() => filterByBookName(index)}>More</Button>
+                      </div>
+                    )}
+                  </div>
                 ))}
-              </div>
-              <div className='libraryBtn'>
-                <Button>More</Button>
-              </div>
-            </div>
-            <div className='libraryBooksContainer'>
-              <div className='libraryItems'>
-                {libraryFdfsItems.map((item, index) => (
-                  <LibraryCard
-                    key={index}
-                    image={item.image}
-                    alt={item.text}
-                    contentText={item.text}
-                    totalIcon={item.total.icon}
-                    totalNumber={item.total.number}
-                    btnText='Kutubhonaga otish'
-                    infoTitle={item.infoTitle}
-                    infoText={item.infoText}
-                  />
-                ))}
-              </div>
-              <div className='libraryBtn'>
-                <Button>More</Button>
-              </div>
-            </div>
-            <div className='libraryBooksContainer'>
-              <div className='libraryItems'>
-                {libraryAudioItems.map((item, index) => (
-                  <LibraryCard
-                    key={index}
-                    image={item.image}
-                    alt={item.text}
-                    contentText={item.text}
-                    totalIcon={item.total.icon}
-                    totalNumber={item.total.number}
-                    btnText='Kutubhonaga otish'
-                    infoTitle={item.infoTitle}
-                    infoText={item.infoText}
-                  />
-                ))}
-              </div>
-              <div className='libraryBtn'>
-                <Button>More</Button>
-              </div>
-            </div>
-            <div className='libraryBooksContainer'>
-              <div className='libraryItems'>
-                {libraryVideoItems.map((item, index) => (
-                  <LibraryCard
-                    key={index}
-                    image={item.image}
-                    alt={item.text}
-                    contentText={item.text}
-                    totalIcon={item.total.icon}
-                    totalNumber={item.total.number}
-                    btnText='Kutubhonaga otish'
-                    infoTitle={item.infoTitle}
-                    infoText={item.infoText}
-                  />
-                ))}
-              </div>
-              <div className='libraryBtn'>
-                <Button>More</Button>
-              </div>
-            </div>
           </div>
         </div>
       </div>

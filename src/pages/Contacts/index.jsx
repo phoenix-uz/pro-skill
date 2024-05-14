@@ -1,9 +1,9 @@
 import React from "react";
-import "./styles.sass";
+import { Link } from "react-browser-router";
 import PagesIntro from "../../components/UI/PagesIntro";
 import ContactsForm from "../../components/UI/ContactsForm";
 import contactsMap from "../../assets/images/map.png";
-import { Link } from "react-browser-router";
+import "./styles.sass";
 
 const ContactsPage = () => {
   return (

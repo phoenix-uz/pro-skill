@@ -1,8 +1,16 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Input from "../Input";
 import "./styles.sass";
+import { useDispatch } from "react-redux";
+import { fetchSearchData } from "../../../store/searchSlice";
 
 const Search = () => {
+  const [searchQuery, setSearchQuery] = useState("");
+
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(fetchSearchData(searchQuery));
+  }, [searchQuery]);
   return (
     <div className='search'>
       <div className='searchIcon'>
@@ -10,8 +18,9 @@ const Search = () => {
       </div>
       <Input
         className='inputSearch'
-        //   value={filter.query}
-        //   onChange={(e) => setFilter({ ...filter, query: e.target.value })}
+        type='search'
+        value={searchQuery}
+        onChange={(e) => setSearchQuery(e.target.value)}
         placeholder='search'
       />
     </div>

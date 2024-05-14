@@ -1,9 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import Button from "../UI/Button";
 import BenefitsCard from "./BenefitsCard";
 import "./styles.sass";
+import ModalBox from "../UI/ModalBox";
 
 const Benefits = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
+
   return (
     <section className='benefits'>
       <div className='blob first'></div>
@@ -28,8 +38,14 @@ const Benefits = () => {
               </p>
             </div>
             <div className='btnContainer'>
-              <Button className='outline'>Kurs sotib olish</Button>
-              <Button className='outline'>Testdan otish</Button>
+              <Button className='outline'> Kurs sotib olish</Button>
+              <Button
+                className='outline'
+                onClick={openModal}
+              >
+                Testdan otish
+              </Button>
+              {isModalOpen && <ModalBox onClick={closeModal} />}
             </div>
           </div>
           <div className='blob first'></div>
