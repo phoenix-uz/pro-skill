@@ -1,21 +1,22 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from "axios";
 import Cookies from 'js-cookie'
+import { toast } from 'react-toastify';
+import { API_BASE } from './consst';
 
 export const fetchProfileData = createAsyncThunk(
   'profile/fetchProfileData',
   async () => {
     const token = Cookies.get('access_token')
-    console.log('token', token);
     try {
-      const response = await axios.get('http://185.217.131.110:5000/auth/profile', {
+      const response = await axios.get(`${API_BASE}/auth/profile`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
       });
       return response.data;
     } catch (error) {
-      console.error('Error fetching user data:', error);
+      toast.error('Foydalanuvchi maʼlumotlarini olishda xatolik yuz berdi:', error);
       throw error;
     }
   }

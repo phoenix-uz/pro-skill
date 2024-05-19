@@ -5,6 +5,8 @@ import librarySlice from "./librarySlice"
 import libraryWithItemsSlice from "./libraryWithItemsSlice"
 import profileSlice from "./profileSlice"
 import searchSlice from "./searchSlice"
+import bookPurchaseSlice from "./bookPurchaseSlice"
+import clickPaymentSlice from "./clickPaymentSlice"
 
 export const store = configureStore({
     reducer:{
@@ -13,6 +15,8 @@ export const store = configureStore({
         library: librarySlice,
         libraryWithItems: libraryWithItemsSlice,
         profile: profileSlice,
-        search: searchSlice
+        search: searchSlice,
+        bookPurchase : bookPurchaseSlice,
+        clickPayment: clickPaymentSlice
     }
 })

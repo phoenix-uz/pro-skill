@@ -1,11 +1,12 @@
 
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
+import { API_BASE } from './consst';
 
 export const fetchLibraryWithItemsData = createAsyncThunk(
   'libraryWithItems/fetchData',
   async () => {
-    const response = await axios.get('http://185.217.131.110:5000/library/withItems');
+    const response = await axios.get(`${API_BASE}/library/withItems`);
     return response.data;
   }
 );

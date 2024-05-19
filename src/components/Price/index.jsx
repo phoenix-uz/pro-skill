@@ -1,6 +1,8 @@
 import React from "react";
 import Button from "../UI/Button";
 import "./styles.sass";
+import { Link } from "react-router-dom";
+import Cookies from "js-cookie";
 
 const Price = () => {
   const priceCardInfo = [
@@ -39,6 +41,10 @@ const Price = () => {
       ],
     },
   ];
+
+  const handleCourseName = (name) => {
+    Cookies.set("name", name);
+  };
   return (
     <section
       className='price'
@@ -76,9 +82,21 @@ const Price = () => {
                     </div>
                   ))}
                 </div>
-                <div className='cardBtn'>
-                  <Button>Sotib olish</Button>
-                </div>
+                {Cookies.get("access_token") ? (
+                  <Link
+                    to='/payment'
+                    className='cardBtn'
+                  >
+                    <Button onClick={() => handleCourseName(item.name)}>Sotib olish</Button>
+                  </Link>
+                ) : (
+                  <Link
+                    to='/auth'
+                    className='cardBtn'
+                  >
+                    <Button>Sotib olish</Button>
+                  </Link>
+                )}
               </div>
             </div>
           ))}

@@ -1,11 +1,11 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { toast } from "react-toastify";
-// import axios from "axios";
 import 'react-toastify/dist/ReactToastify.css';
+import { API_BASE } from "./consst";
 
 export const addSms = createAsyncThunk('user/addSms', async(values) => {
     try{
-        const response = await fetch( `http://185.217.131.110:5000/sms`, {
+        const response = await fetch( `${API_BASE}/sms`, {
             method: 'POST',
             body: JSON.stringify({
                 name: values.name,
@@ -15,11 +15,10 @@ export const addSms = createAsyncThunk('user/addSms', async(values) => {
             }),
             headers: {Accept: 'application/json', 'Content-Type':'application/json'},
         });
-        toast.success('SMS successfully added!')
+        toast.success("SMS muvaffaqiyatli qo'shildi!")
         return console.log(response)
     } catch (error){
-        toast.error('Failed to add SMS. Please try again.');
-        console.log(error);
+        toast.error("SMS qo‘shib bo‘lmadi. Iltimos, yana bir bor urinib ko'ring.");
     }
 })
 
@@ -47,18 +46,6 @@ const mainSlice = createSlice({
             state.data = []
             state.error = action.error.message
         });
-
-        // builder.addCase(fetchLibraryData.pending, state => {
-        //     state.loading = true
-        // });
-        // builder.addCase(fetchLibraryData.fulfilled, (state, action) => {
-        //     state.loading = false
-        //     state.data = action.payload
-        // });
-        // builder.addCase(fetchLibraryData.rejected, (state, action) => {
-        //     state.loading = false
-        //     state.error = action.error.message
-        // })
     }
 })
 

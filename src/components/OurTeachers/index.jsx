@@ -4,8 +4,10 @@ import Button from "../UI/Button";
 import firstTutor from "../../assets/images/firstTutor.png";
 import secondTutor from "../../assets/images/secondTutor.png";
 import "./styles.sass";
+import { useSelector } from "react-redux";
 
 const OurTeachers = () => {
+  const isLogined = useSelector((state) => state.auth.isLogined);
   const teacherCard = [
     {
       id: 1,
@@ -64,9 +66,21 @@ const OurTeachers = () => {
                   <p className='text'>{item.text}</p>
                 </div>
               </div>
-              <div className='cardBtn'>
-                <Button> Kurs sotib olish</Button>
-              </div>
+              {isLogined ? (
+                <Link
+                  to='/payment'
+                  className='cardBtn'
+                >
+                  <Button> Kurs sotib olish</Button>
+                </Link>
+              ) : (
+                <Link
+                  to='/auth'
+                  className='cardBtn'
+                >
+                  <Button> Kurs sotib olish</Button>
+                </Link>
+              )}
             </div>
           ))}
         </div>

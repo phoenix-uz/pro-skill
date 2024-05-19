@@ -2,13 +2,12 @@ import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import Button from "../UI/Button";
 import NavBar from "../NavBar";
+import Cookies from "js-cookie";
 import "./styles.sass";
-import { useSelector } from "react-redux";
 
 const Header = () => {
   const location = useLocation();
   const [burgerIsOpen, setBurgerIsOpen] = useState(false);
-  const isAuteficated = useSelector((state) => state.auth.isAuteficated);
 
   const toggleMenu = (toOpen) => {
     setBurgerIsOpen(toOpen);
@@ -37,7 +36,7 @@ const Header = () => {
                 ></span>
                 <NavBar burgerIsOpen={burgerIsOpen} />
               </div>
-              {isAuteficated ? (
+              {!Cookies.get("access_token") && (
                 <div className='headerItem'>
                   <Link
                     className='registrationLink'
@@ -53,8 +52,6 @@ const Header = () => {
                   </Link>
                   {/* language switcher */}
                 </div>
-              ) : (
-                <></>
               )}
               <div
                 className='burgerBtnContainer'

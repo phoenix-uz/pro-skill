@@ -1,5 +1,7 @@
 import React from "react";
-import { Link } from "react-browser-router";
+import { Link } from "react-router-dom";
+import ModalBox from "../ModalBox";
+
 import Button from "../Button";
 import "./styles.sass";
 
@@ -15,6 +17,7 @@ const LibraryCard = ({
   totalNumber,
   btnText,
   btnLink,
+  onClick,
 }) => {
   return (
     <div className='libraryItem'>
@@ -60,7 +63,7 @@ const LibraryCard = ({
             to={btnLink}
             className='contentBtn'
           >
-            <Button>{btnText}</Button>
+            <Button onClick={onClick}>{btnText}</Button>
           </Link>
         </div>
       </div>

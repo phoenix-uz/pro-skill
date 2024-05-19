@@ -16,13 +16,6 @@ const Library = () => {
     }
   }, [status, dispatch]);
 
-  const libraryItem = [
-    { id: 1, image: library, text: "Audio", total: { icon: "icon-Soundwave", number: "222" } },
-    { id: 2, image: library, text: "Kitoblar", total: { icon: "icon-Notebook", number: "269" } },
-    { id: 3, image: library, text: "Pdf", total: { icon: "icon-Folder-With-Files", number: "599" } },
-    { id: 4, image: library, text: "Video", total: { icon: "icon-Play", number: "220" } },
-  ];
-
   return (
     <section className='library'>
       {status === "loading" && <p>Loading...</p>}

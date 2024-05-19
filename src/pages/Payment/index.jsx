@@ -32,7 +32,7 @@ const PaymentPage = () => {
               </div>
               <div className='paymentBtns'>
                 <Link
-                  to=''
+                  to='/payme'
                   className='links'
                 >
                   <img
@@ -42,7 +42,7 @@ const PaymentPage = () => {
                   />
                 </Link>
                 <Link
-                  to=''
+                  to='/click'
                   className='links'
                 >
                   <img
@@ -51,13 +51,11 @@ const PaymentPage = () => {
                     className='img'
                   />
                 </Link>
-                <Button>Ball bilan sotib oling</Button>
               </div>
             </div>
           </div>
         </div>
       </div>
-      {/* <TestCard /> */}
     </div>
   );
 };

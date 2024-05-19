@@ -3,6 +3,7 @@ import Button from "../UI/Button";
 import firstTutor from "../../assets/images/firstTutor.png";
 import coursesBg from "../../assets/images/coursesBg.png";
 import "./styles.sass";
+import { Link } from "react-router-dom";
 
 const CoursesInformation = () => {
   return (
@@ -42,9 +43,12 @@ const CoursesInformation = () => {
                 </div>
               </div>
             </div>
-            <div className='inforFooter'>
+            <Link
+              to='/courses/1'
+              className='inforFooter'
+            >
               <Button>Kurslar</Button>
-            </div>
+            </Link>
           </div>
           <div className='coursesImagesGroup'>
             <div className='mainImageInformation'>

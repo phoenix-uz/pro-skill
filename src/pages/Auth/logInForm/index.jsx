@@ -11,7 +11,7 @@ const LogInForm = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const phoneMask = "+998 (00) 000-00-00";
-  const isLogined = useSelector((state) => state.auth.isLogined);
+  const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
   const Mask = [
     {
       mask: phoneMask,
@@ -27,8 +27,8 @@ const LogInForm = () => {
   };
 
   useEffect(() => {
-    if (isLogined) navigate("/");
-  }, [isLogined]);
+    if (isAuthenticated) navigate("/");
+  }, [isAuthenticated]);
 
   const handleSubmit = (e) => {
     e.preventDefault();

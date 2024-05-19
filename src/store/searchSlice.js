@@ -1,6 +1,8 @@
 
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
+import { toast } from 'react-toastify';
+import { API_BASE } from './consst';
 
 export const fetchSearchData = createAsyncThunk(
   'libraryWithItems/fetchSearchData',
@@ -8,12 +10,12 @@ export const fetchSearchData = createAsyncThunk(
         if(searchQuery.length < 2 )
             return []
       try {
-        const response = await axios.get('http://185.217.131.110:5000/item/title/' + searchQuery, {
+        const response = await axios.get(`${API_BASE}/item/title/` + searchQuery, {
           headers: {Accept: 'application/json', 'Content-Type':'application/json'},
         });
         return response.data;
       } catch (error) {
-        console.error('Error fetching user data:', error);
+        toast.error('Qidiruv maʼlumotlarini olishda xatolik yuz berdi:', error);
         throw error;
       }
     }

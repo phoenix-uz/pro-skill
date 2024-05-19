@@ -2,10 +2,13 @@ import React, { useState } from "react";
 import Button from "../UI/Button";
 import BenefitsCard from "./BenefitsCard";
 import "./styles.sass";
-import ModalBox from "../UI/ModalBox";
+import TextModalBox from "../UI/TextModalBox";
+import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 
 const Benefits = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const isLogined = useSelector((state) => state.auth.isLogined);
   const openModal = () => {
     setIsModalOpen(true);
   };
@@ -38,14 +41,22 @@ const Benefits = () => {
               </p>
             </div>
             <div className='btnContainer'>
-              <Button className='outline'> Kurs sotib olish</Button>
+              {isLogined ? (
+                <Link to='/payment'>
+                  <Button className='outline'> Kurs sotib olish</Button>
+                </Link>
+              ) : (
+                <Link to='/auth'>
+                  <Button className='outline'> Kurs sotib olish</Button>
+                </Link>
+              )}
               <Button
                 className='outline'
                 onClick={openModal}
               >
                 Testdan otish
               </Button>
-              {isModalOpen && <ModalBox onClick={closeModal} />}
+              {isModalOpen && <TextModalBox onClick={closeModal} />}
             </div>
           </div>
           <div className='blob first'></div>

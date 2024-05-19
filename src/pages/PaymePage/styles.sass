@@ -1,0 +1,51 @@
+@import '../../assets/styles/_mixins'
+@import '../../assets/styles/_variables'
+.paymePage
+    .paymeContainer
+        .paymeBox
+            padding: 50px 0
+            display: flex
+            justify-content: space-around
+            @media screen and (max-width: 850px)
+                flex-direction: column
+            .paymeItems
+                display: flex
+                align-items: center
+                @media screen and (max-width: 450px)
+                    flex-direction: column
+                    margin: 20px 0
+                .paymeLogo
+                .totalAmount
+                    display: flex
+                    flex-direction: column
+                    row-gap: 5px
+                    .amountText
+                        +typography(20px, 400, map-get($neutral, 'lightGray'))
+                    .amount
+                        +typography(25px, 600, map-get($basic, 'black'))
+
+            .paymeForm
+                .formTitle
+                    .title
+                        +typography(25px, 500, map-get($basic, black))
+                .inputBox
+                    display: flex
+                    flex-direction: column
+                    .label
+                        +typography(16px, 400, map-get($neutral, 'lightGray'))
+                    .input
+                        width: 100%
+                        padding: 5px 0
+                        margin: 10px 0
+                        background: transparent
+                        border: 2px solid map-get($neutral, 'lightGray')
+                        border-radius: 6px
+                        padding: 10px 15px
+                        color: map-get($basic, 'black')
+                        outline: none
+                        resize: none
+                        &:focus ,
+                        &:valid
+                            border: 2px solid map-get($primary, 'primary')
+                .btn
+                    width: 100%
