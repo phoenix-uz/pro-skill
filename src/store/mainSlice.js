@@ -10,7 +10,7 @@ export const addSms = createAsyncThunk('user/addSms', async(values) => {
             body: JSON.stringify({
                 name: values.name,
                 surname: values.surname,
-                phone_number: values.phone_number,
+                phoneNumber: values.phone_number,
                 sms: values.sms
             }),
             headers: {Accept: 'application/json', 'Content-Type':'application/json'},
