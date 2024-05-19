@@ -6,6 +6,7 @@ import PaymentVerificationInput from "./PaymentVerification";
 import Timer from "../Timer";
 import Button from "../UI/Button";
 import { sendPaymentOtp } from "../../store/clickPaymentSlice";
+import { useNavigate } from "react-router-dom";
 
 const PaymentOtp = () => {
   const navigate = useNavigate();
@@ -29,6 +30,7 @@ const PaymentOtp = () => {
 
   const handleSubmit = () => {
     dispatch(sendPaymentOtp(otp));
+    navigate(`/`);
   };
   return (
     <div className='paymentOtp'>
