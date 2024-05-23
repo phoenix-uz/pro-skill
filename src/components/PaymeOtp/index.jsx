@@ -1,18 +1,18 @@
 import React, { useEffect, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { sendPaymentOtp } from "../../store/clickPaymentSlice";
-import PaymentVerificationInput from "./PaymentVerification";
+import { useNavigate, Link } from "react-router-dom";
+import { sendPaymePaymentOtp } from "../../store/paymePaymentSlice";
 import Timer from "../Timer";
 import Button from "../UI/Button";
+import PaymeVerificationInput from "./PaymeVerificationInput";
 import "./styles.sass";
 
-const PaymentOtp = () => {
+const PaymeOtp = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const [otp, setOtp] = useState(new Array(6).fill(""));
   const [filled, setFilled] = useState(0);
-  const isPurchesed = useSelector((state) => state.clickPayment.isPurchesed);
+  const isPurchesed = useSelector((state) => state.paymePayment.isPurchesed);
   useEffect(
     (e) => {
       if (filled === 5) {
@@ -26,11 +26,11 @@ const PaymentOtp = () => {
   }, [isPurchesed]);
 
   const handleSubmit = () => {
-    dispatch(sendPaymentOtp(otp));
+    dispatch(sendPaymePaymentOtp(otp));
     navigate(`/`);
   };
   return (
-    <div className='paymentOtp'>
+    <div className='paymeOtp'>
       <div className='container'>
         <div className='otpContainer'>
           <div className='otpHeader'>
@@ -51,7 +51,7 @@ const PaymentOtp = () => {
               onSubmit={handleSubmit}
             >
               <div className='verificationCard'>
-                <PaymentVerificationInput
+                <PaymeVerificationInput
                   otp={otp}
                   setOtp={setOtp}
                   submit={handleSubmit}
@@ -80,4 +80,4 @@ const PaymentOtp = () => {
   );
 };
 
-export default PaymentOtp;
+export default PaymeOtp;

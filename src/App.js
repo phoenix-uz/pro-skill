@@ -1,12 +1,12 @@
 // import { BrowserRouter} from "react-router-dom";
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 import { linksGroup } from "./router";
+import { ToastContainer } from "react-toastify";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import TopBanner from "./components/TopBanner";
-import "./assets/styles/global.sass";
 import ScrollToTop from "./router/skrollToTop";
-import { ToastContainer } from "react-toastify";
+import "./assets/styles/global.sass";
 
 
 const App = () => {

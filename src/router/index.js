@@ -1,4 +1,5 @@
 import PaymentOtp from "../components/PaymentOtp";
+import PaymeOtp from "../components/PaymeOtp";
 import AboutPage from "../pages/About";
 import AuthPage from "../pages/Auth";
 import OtpForm from "../pages/Auth/OtpForm";
@@ -24,5 +25,6 @@ export const linksGroup = [
     {id:10, path:'/payment', component: <PaymentPage/>},
     {id:11, path:'/click', component: <ClickPage/>},
     {id:12, path:'/payme', component: <PaymePage/>},
-    {id: 13, path: '/paymentOtp', component: <PaymentOtp/>}
+    {id: 13, path: '/paymentOtp', component: <PaymentOtp/>},
+    {id: 14, path: '/paymeOtp', component: <PaymeOtp/>}
 ]

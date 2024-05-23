@@ -1,0 +1,25 @@
+@import '../../../assets/styles/_variables'
+@import '../../../assets/styles/_mixins'
+.paymeVerificationInput
+    margin-top: 32px
+    label
+        display: flex
+        justify-content: center
+    .inputOtp
+        max-width: 46px
+        width: 100%
+        padding: 12px 16px
+        border: 2px solid map-get($neutral, "gray" )
+        border-radius: 4px
+        margin: auto
+        &:focus-visible
+            outline: none
+            border: 2px solid map-get($primary, "primary" )
+        &::placeholder
+            +typography( 400, 16px, map-get($basic, "black" ))
+        @media screen and (max-width:470px)
+            padding: 12px 10px
+    input[type="text"]
+        +typography( 400, 16px, map-get($basic, "black" ))
+        margin: 0
+        margin-right: 10px

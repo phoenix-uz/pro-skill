@@ -40,7 +40,6 @@ const TestCard = ({ onClick }) => {
   };
 
   const handleSubmit = () => {
-    console.log("Submitted data:", checkboxData);
     setSubmitted(true);
   };
 

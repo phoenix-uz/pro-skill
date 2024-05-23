@@ -1,14 +1,13 @@
 import React, { useState } from "react";
-import PagesIntro from "../../components/UI/PagesIntro";
-import Input from "../../components/UI/Input";
-import "./styles.sass";
-import Button from "../../components/UI/Button";
-import ClickImage from "../../assets/images/click.png";
-import Cookies from "js-cookie";
 import { IMaskInput } from "react-imask";
 import { useDispatch } from "react-redux";
 import { clickPaymentData } from "../../store/clickPaymentSlice";
 import { useNavigate } from "react-router-dom";
+import PagesIntro from "../../components/UI/PagesIntro";
+import Button from "../../components/UI/Button";
+import ClickImage from "../../assets/images/click.png";
+import Cookies from "js-cookie";
+import "./styles.sass";
 
 const ClickPage = () => {
   const courseName = Cookies.get("name");
@@ -40,13 +39,12 @@ const ClickPage = () => {
   }
   const handleChange = (e) => {
     setCardData({ ...cardData, [e.target.name]: e.target.value });
-    // setFormErrors({ ...formErrors, [e.target.name]: false });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     dispatch(clickPaymentData(cardData));
-    navigate(`/paymentOtp`);
+    navigate(`/paymeOtp`);
     setCardData({
       cardNumber: "",
       expireDate: "",

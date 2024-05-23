@@ -1,9 +1,9 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { toast } from "react-toastify";
+import { API_BASE } from "./consst";
 import Cookies from 'js-cookie'
 import axios from "axios";
 import 'react-toastify/dist/ReactToastify.css';
-import { API_BASE } from "./consst";
 
 export const registrationForm = createAsyncThunk('user/register', async(values) => {
     try {
@@ -24,11 +24,9 @@ export const registrationForm = createAsyncThunk('user/register', async(values) 
           
         });
         Cookies.set("phoneNumber", values.phoneNumber);
-        localStorage.setItem('phoneNumber', values.phoneNumber);
         const data = await response.json();
         return(data)
       } catch (error) {
-        toast.error("Nimadir noto'g'ri bajarildi")
         throw new Error(error);
       }
 })
@@ -48,7 +46,7 @@ export const sendOtp = createAsyncThunk('user/otp', async(code) => {
             }
         }).then(res => {
             if(res.status === 200 || res.status === 201) {
-            Cookies.set('access_token', res.access_token,{ expires: 1 });
+                Cookies.set('access_token', res.data.access_token,{ expires: 1 });
             return res;
             } else {
                 throw new Error('autent emas')
@@ -95,7 +93,6 @@ const authSlice = createSlice({
         auth: [],
         isAuthenticated: false,
         token: Cookies.get('access_token') || null,
-        // isLogined: Cookies.get('access_token') ? true : false,
         error: '',
     },
     extraReducers:builder=>{
@@ -117,12 +114,10 @@ const authSlice = createSlice({
             state.error = null;
         })
         builder.addCase(sendOtp.fulfilled, (state) => {
-            console.log('accepted')
             state.isAuthenticated = true
             state.error = null;
         })
         builder.addCase(sendOtp.rejected, (state, action) => {
-            console.log("not accepted")
             state.isAuthenticated = false
             state.error = action.error.message || 'Failed to send OTP';
         });
