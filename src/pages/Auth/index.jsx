@@ -75,11 +75,11 @@ const AuthPage = () => {
                   aria-label='basic tabs example'
                 >
                   <Tab
-                    label='Registration'
+                    label='Roʻyxatdan oʻtish'
                     {...a11yProps(0)}
                   />
                   <Tab
-                    label='Auth'
+                    label='Tizimga kirish'
                     {...a11yProps(1)}
                   />
                 </Tabs>
