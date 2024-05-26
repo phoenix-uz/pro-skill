@@ -1,9 +1,11 @@
 import React from "react";
-import "./styles.sass";
 import PagesIntro from "../../components/UI/PagesIntro";
 import AboutCard from "../../components/UI/AboutCard";
-import cardAboutInfo from "../../assets/images/cardAboutInfo.png";
+import cardAboutInfo1 from "../../assets/images/about3.jpg";
+import cardAboutInfo2 from "../../assets/images/about5.jpg";
+import cardAboutInfo3 from "../../assets/images/about6.jpg";
 import Achivements from "../../components/Achievements";
+import "./styles.sass";
 
 const AboutPage = () => {
   return (
@@ -18,7 +20,7 @@ const AboutPage = () => {
           <AboutCard
             title='Pro Skill kompaniya haqida'
             text='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt utlabore et dolore magna aliqua. Ut enum ad minim veniam, quis nostrudLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt utlabore et dolore magna aliqua. Ut enum ad minim veniam, quis nostrud'
-            image={cardAboutInfo}
+            image={cardAboutInfo1}
           />
           <video
             autoPlay
@@ -35,13 +37,13 @@ const AboutPage = () => {
           <AboutCard
             title='Bizning vazifamiz'
             text='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt utlabore et dolore magna aliqua. Ut enum ad minim veniam, quis nostrudLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt utlabore et dolore magna aliqua. Ut enum ad minim veniam, quis nostrud'
-            image={cardAboutInfo}
+            image={cardAboutInfo2}
             className='infoReverse'
           />
           <AboutCard
             title='Bizning vazifamiz'
             text='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt utlabore et dolore magna aliqua. Ut enum ad minim veniam, quis nostrudLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt utlabore et dolore magna aliqua. Ut enum ad minim veniam, quis nostrud'
-            image={cardAboutInfo}
+            image={cardAboutInfo3}
           />
         </div>
       </div>

@@ -13,9 +13,12 @@ const NewsPage = () => {
           <PagesIntro
             introIcon='icon-Notebook'
             introTitle='Yangiliklar'
-            introText='We value your feedback, questions, and concerns at Nutritionist. Our dedicated team is here to assist you and provide the support you need on your nutritional journey. Please do not hesitate to reach out to us using any of the following contact methods'
+            introText='Важно следить за тенденциями, находится в информационной повестке и не отставать, тогда вы всегда будете востребованы и актуальны.'
           >
-            <Quote />
+            <Quote
+              name='Энди Уорхол'
+              text='"Быть успешным в бизнесе - это самое увлекательное искусство. Делать деньги - это искусство и работа - это искусство, а хороший бизнес - лучшее искусство".'
+            />
           </PagesIntro>
           <div className='cardsNewsContainer'>
             <div className='cards'>

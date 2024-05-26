@@ -104,9 +104,12 @@ const LibraryPage = () => {
           <PagesIntro
             introIcon='icon-Notebook'
             introTitle='Kutubhona'
-            introText='We value your feedback, questions, and concerns at Nutritionist. Our dedicated team is here to assist you and provide the support you need on your nutritional journey. Please do not hesitate to reach out to us using any of the following contact methods'
+            introText='Нет пределу совершенству, стремитесь стать лучшим в своем деле, а наша постоянно пополняемая библиотека вам в это поможет.'
           >
-            <Quote />
+            <Quote
+              name='Мэри Кэй Эш'
+              text='"Представьте, что каждый человек, с которым вы встречаетесь, имеет знак вокруг своей шеи, который говорит: "Заставьте меня чувствовать себя важным". Мало того, что вам удастся добиться успеха в продажах, вы добъетесь успеха в жизни"'
+            />
           </PagesIntro>
           {libraryPageData ? (
             <>

@@ -14,13 +14,13 @@ const Intro = () => {
             <div className='introHeading'>
               <h1 className='heading'>
                 {" "}
-                <span className='introLogo'>Pro Skill</span> bilan o'rganing va yuksaklikka erishing!
+                Меняй свою жизнь и достигай новых вершин вместе с <span className='introLogo'> Pro Skill</span>
               </h1>
             </div>
             <div className='introSubtitle'>
               <p className='subtitle'>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus sit nunc mauris arcu blandit. Turpis
-                vitae lectus a ut.
+                Квалифицированные менторы, более — студентов прошли наш курс и успешно были трудоустроены. Присоединяйся
+                и ты, получай знания, прокачивай свои скиллы, зарабатывай.
               </p>
             </div>
             <Avatar />

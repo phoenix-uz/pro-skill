@@ -4,7 +4,11 @@ import { CoursesData } from "../../data";
 import PagesIntro from "../../components/UI/PagesIntro";
 import coursesImage from "../../assets/images/corses.png";
 import LibraryCard from "../../components/UI/LibraryCard";
-import library from "../../assets/images/library.png";
+import library1 from "../../assets/images/course1.jpg";
+import library2 from "../../assets/images/course2.jpg";
+import coursesImage1 from "../../assets/images/courses8.png";
+import coursesImage2 from "../../assets/images/courses9.png";
+import coursesImage3 from "../../assets/images/courses10.png";
 import Price from "../../components/Price";
 import "./styles.sass";
 
@@ -23,7 +27,7 @@ const CoursesPage = () => {
           <PagesIntro
             introIcon='icon-Notebook'
             introTitle='Bizning onlayn kurslar'
-            introText='We value your feedback, questions, and concerns at Nutritionist. Our dedicated team is here to assist you and provide the support you need on your nutritional journey. Please do not hesitate to reach out to us using any of the following contact methods'
+            introText='Самый доступный и удобный способ освоить новую профессию и получить знания из любой точки мира.'
           ></PagesIntro>
           {pagesData.map((item, index) => (
             <div
@@ -43,21 +47,21 @@ const CoursesPage = () => {
                   <div className='coursesBody'>
                     <div className='imageBox'>
                       <img
-                        src={coursesImage}
+                        src={coursesImage1}
                         alt='coursesImage'
                         className='img'
                       />
                     </div>
                     <div className='imageBox'>
                       <img
-                        src={coursesImage}
+                        src={coursesImage2}
                         alt='coursesImage'
                         className='img'
                       />
                     </div>
                     <div className='imageBox'>
                       <img
-                        src={coursesImage}
+                        src={coursesImage3}
                         alt='coursesImage'
                         className='img'
                       />
@@ -75,35 +79,156 @@ const CoursesPage = () => {
               </div>
               <div className='coursesList'>
                 <div className='listContainer'>
-                  {item.coursesList.map((listInfo, index) => (
-                    <div
-                      className='listItems'
-                      key={index}
-                    >
-                      <div className='listHeading'>
-                        <div className='listTitle'>
-                          <h4 className='titile'>{listInfo.title}</h4>
-                        </div>
-                        <div className='listSubtitle'>
-                          <p className='subtitle'>{listInfo.subtitle}</p>
-                        </div>
+                  <div className='listItems'>
+                    <div className='listHeading'>
+                      <div className='listTitle'>
+                        <h4 className='titile'>Преимущества профессии </h4>
                       </div>
-                      <div className='listDuration'>
-                        <div className='durationIcon'>
-                          <i className='icon-Play'></i>
-                        </div>
-                        <div className='durationText'>
-                          <p className='text'>{listInfo.duration}</p>
-                        </div>
+                      <div className='listSubtitle'>
+                        <p className='subtitle'>Dars 01</p>
                       </div>
                     </div>
-                  ))}
+                    <div className='listDuration'>
+                      <div className='durationIcon'>
+                        <i className='icon-Play'></i>
+                      </div>
+                      <div className='durationText'>
+                        <p className='text'>45 minut</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className='listItems'>
+                    <div className='listHeading'>
+                      <div className='listTitle'>
+                        <h4 className='titile'>Продажа это</h4>
+                      </div>
+                      <div className='listSubtitle'>
+                        <p className='subtitle'>Dars 02</p>
+                      </div>
+                    </div>
+                    <div className='listDuration'>
+                      <div className='durationIcon'>
+                        <i className='icon-Play'></i>
+                      </div>
+                      <div className='durationText'>
+                        <p className='text'>45 minut</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className='listItems'>
+                    <div className='listHeading'>
+                      <div className='listTitle'>
+                        <h4 className='titile'>Этапы продаж и цели</h4>
+                      </div>
+                      <div className='listSubtitle'>
+                        <p className='subtitle'>Dars 03</p>
+                      </div>
+                    </div>
+                    <div className='listDuration'>
+                      <div className='durationIcon'>
+                        <i className='icon-Play'></i>
+                      </div>
+                      <div className='durationText'>
+                        <p className='text'>45 minut</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className='listItems'>
+                    <div className='listHeading'>
+                      <div className='listTitle'>
+                        <h4 className='titile'>Результативность и эффективность</h4>
+                      </div>
+                      <div className='listSubtitle'>
+                        <p className='subtitle'>Dars 04</p>
+                      </div>
+                    </div>
+                    <div className='listDuration'>
+                      <div className='durationIcon'>
+                        <i className='icon-Play'></i>
+                      </div>
+                      <div className='durationText'>
+                        <p className='text'>45 minut</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className='listItems'>
+                    <div className='listHeading'>
+                      <div className='listTitle'>
+                        <h4 className='titile'>Воронка продаж</h4>
+                      </div>
+                      <div className='listSubtitle'>
+                        <p className='subtitle'>Dars 05</p>
+                      </div>
+                    </div>
+                    <div className='listDuration'>
+                      <div className='durationIcon'>
+                        <i className='icon-Play'></i>
+                      </div>
+                      <div className='durationText'>
+                        <p className='text'>45 minut</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className='listItems'>
+                    <div className='listHeading'>
+                      <div className='listTitle'>
+                        <h4 className='titile'>Чек лист </h4>
+                      </div>
+                      <div className='listSubtitle'>
+                        <p className='subtitle'>Dars 06</p>
+                      </div>
+                    </div>
+                    <div className='listDuration'>
+                      <div className='durationIcon'>
+                        <i className='icon-Play'></i>
+                      </div>
+                      <div className='durationText'>
+                        <p className='text'>45 minut</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className='listItems'>
+                    <div className='listHeading'>
+                      <div className='listTitle'>
+                        <h4 className='titile'>Скрипт</h4>
+                      </div>
+                      <div className='listSubtitle'>
+                        <p className='subtitle'>Dars 07</p>
+                      </div>
+                    </div>
+                    <div className='listDuration'>
+                      <div className='durationIcon'>
+                        <i className='icon-Play'></i>
+                      </div>
+                      <div className='durationText'>
+                        <p className='text'>45 minut</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className='listItems'>
+                    <div className='listHeading'>
+                      <div className='listTitle'>
+                        <h4 className='titile'>Разбор звонков </h4>
+                      </div>
+                      <div className='listSubtitle'>
+                        <p className='subtitle'>Dars 08</p>
+                      </div>
+                    </div>
+                    <div className='listDuration'>
+                      <div className='durationIcon'>
+                        <i className='icon-Play'></i>
+                      </div>
+                      <div className='durationText'>
+                        <p className='text'>45 minut</p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div className='coursesCards'>
                 <LibraryCard
                   key={index}
-                  image={library}
+                  image={library1}
                   alt={item.coursesCards.secondPage.teacherName}
                   contentText={item.coursesCards.secondPage.teacherName}
                   iconDuration='icon-Play'
@@ -115,7 +240,7 @@ const CoursesPage = () => {
                 />
                 <LibraryCard
                   key={index}
-                  image={library}
+                  image={library2}
                   alt={item.coursesCards.thirdPage.teacherName}
                   contentText={item.coursesCards.thirdPage.teacherName}
                   iconDuration='icon-Play'

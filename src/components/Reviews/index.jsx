@@ -7,7 +7,7 @@ const Reviews = () => {
     <section className='reviews'>
       <div className='reviewsContainer'>
         <div className='sectionTitleWhite'>
-          <h3 className='title'>Talabalarimizdan fikr-mulohazalar</h3>
+          <h3 className='title'>Отзывы тех, кто прошел наш курс</h3>
         </div>
         <ReviewsSlider />
       </div>

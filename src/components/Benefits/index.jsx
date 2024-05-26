@@ -35,19 +35,19 @@ const Benefits = () => {
             </div>
             <div className='benefitsText'>
               <p className='text'>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus sit nunc mauris arcu blandit. Turpis
-                vitae lectus a ut.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus sit nunc mauris arcu
-                blandit. Turpis vitae lectus a ut.
+                Обучение в ProSkill обеспечивает актуальные знания и практические навыки, трудоустройство после
+                успешного окончания курсов. Преподаватели делятся реальным опытом и инсайтами. Гибкий график позволяет
+                учиться в удобное время, что делает процесс максимально эффективным и доступным.
               </p>
             </div>
             <div className='btnContainer'>
               {isLogined ? (
                 <Link to='/payment'>
-                  <Button className='outline'> Kurs sotib olish</Button>
+                  <Button className='outline'> Покупка курса</Button>
                 </Link>
               ) : (
                 <Link to='/auth'>
-                  <Button className='outline'> Kurs sotib olish</Button>
+                  <Button className='outline'> Покупка курса</Button>
                 </Link>
               )}
               <Button
@@ -66,20 +66,26 @@ const Benefits = () => {
             <div className='cardsBox'>
               <BenefitsCard
                 icon='icon-pen'
-                title='Perfectly Responsive'
-                text='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim.'
+                title='Преподаватели '
+                text='Только лучшие в своем деле!
+                (первая карточка обратная сторона)
+                За плечами у наших преподавателей многолетний опыт работы и оточенные профессиональные навыки'
               />
             </div>
             <div className='cardsBox'>
               <BenefitsCard
                 icon='icon-medal'
-                title='Perfectly Responsive'
-                text='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim.'
+                title='Знания'
+                text='Доступ к ресурсам в любое время.
+                (вторая карточка обратная сторона)
+                Онлайн-библиотека с более, чем 100+ книг по продажам, маркетингу и психологии. Мы собрали видео-нарезки, новости и  статьи со всего интернета.'
               />
               <BenefitsCard
                 icon='icon-shield'
-                title='Perfectly Responsive'
-                text='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim.'
+                title='Трудоустройство'
+                text='Сможете попробовать себя в новой профессии
+                (вторая карточка обратная сторона)
+                После успешного прохождения нашего курса, мы гарантируем трудоустройство, где вы сможете подкрепить полученные знания, практикой.'
               />
             </div>
           </div>

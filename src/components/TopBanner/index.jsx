@@ -18,16 +18,16 @@ const TopBanner = () => {
                 className='topLink'
                 to='/payment'
               >
-                Bepul kurs <i className='star icon-star-full' /> Akcia yaqinda tugidi, kurs sotib olish{" "}
-                <i className='icon-arrow-right2' />
+                Жаркое лето плавит цены 50% скидка на наш курс <i className='star icon-star-full' /> менеджера по
+                продажам <i className='icon-arrow-right2' />
               </Link>
             ) : (
               <Link
                 className='topLink'
                 to='/auth'
               >
-                Bepul kurs <i className='star icon-star-full' /> Akcia yaqinda tugidi, kurs sotib olish{" "}
-                <i className='icon-arrow-right2' />
+                Жаркое лето плавит цены 50% скидка на наш курс <i className='star icon-star-full' /> менеджера по
+                продажам <i className='icon-arrow-right2' />
               </Link>
             )}
           </div>

@@ -16,9 +16,8 @@ const ContactsBlock = () => {
               </div>
               <div className='contentText'>
                 <p className='text'>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi neque numquam cum esse assumenda
-                  explicabo blanditiis! Illum reprehenderit impedit atque quas fugit deserunt delectus dolorum officiis,
-                  aliquid, distinctio est dolorem?
+                  Если у вас остались вопросы, или хотите больше узнать о ProSkill, оставьте заявку — и мы вам
+                  перезвоним.
                 </p>
               </div>
             </div>
@@ -56,7 +55,7 @@ const ContactsBlock = () => {
             </div>
             <div className='contactsMessangers'>
               <div className='messangersTitle'>
-                <div className='title'>Biz bilan bog'lanish:</div>
+                <div className='title'>Наши контакты для связи:</div>
               </div>
               <div className='messangers'>
                 <Link className='icon'>
