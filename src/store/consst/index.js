@@ -1,1 +1,1 @@
-export const API_BASE = 'http://185.217.131.110:5000'
+export const API_BASE = 'https://proskill-academy.com/api'

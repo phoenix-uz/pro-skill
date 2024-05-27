@@ -82,7 +82,7 @@ const LibraryPage = () => {
           {books?.map((item, index) => (
             <LibraryCard
               key={index}
-              image={!item.photoUrl ? LibraryImage : "http://185.217.131.110:5000/" + item.photoUrl}
+              image={!item.photoUrl ? LibraryImage : "https://proskill-academy.com/api/" + item.photoUrl}
               alt={item.text}
               contentText={item.title}
               totalIcon='icon-Folder-With-Files'
@@ -154,7 +154,9 @@ const LibraryPage = () => {
                           {typeItem?.items?.slice(0, 4).map((item, index) => (
                             <LibraryCard
                               key={index}
-                              image={!item.photoUrl ? LibraryImage : "http://185.217.131.110:5000/" + item.photoUrl}
+                              image={
+                                !item.photoUrl ? LibraryImage : "https://proskill-academy.com/api/" + item.photoUrl
+                              }
                               alt={item.text}
                               contentText={item.title}
                               totalIcon='icon-Folder-With-Files'
