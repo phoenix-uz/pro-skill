@@ -21,31 +21,31 @@ const NavBar = ({ burgerIsOpen }) => {
               className='navLink'
               to='./'
             >
-              Bosh sahifa
+              Главная
             </Link>
             <Link
               className='navLink'
               to='./courses/1'
             >
-              Kurs
+              Курсы
             </Link>
             <Link
               className='navLink'
               to='./library'
             >
-              Kutubhona
+              Библиотека
             </Link>
             <Link
               className='navLink'
               to='./news'
             >
-              Yangiliklar
+              Новости
             </Link>
             <Link
               className='navLink'
               to='./about'
             >
-              Biz Hakimizda
+              О нас
             </Link>
             {location.pathname === "/about" ||
             location.pathname === "/news" ||
@@ -56,21 +56,21 @@ const NavBar = ({ burgerIsOpen }) => {
                 to='/#price'
                 className='navLink'
               >
-                Narxlar
+                Цены
               </Link>
             ) : (
               <a
                 className='navLink'
                 href='#price'
               >
-                Narxlar
+                Цены
               </a>
             )}
             <Link
               className='navLink'
               to='./contacts'
             >
-              Contact
+              Контакты
             </Link>
           </div>
         </div>

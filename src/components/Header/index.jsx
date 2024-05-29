@@ -42,13 +42,13 @@ const Header = () => {
                     className='registrationLink'
                     to='/auth'
                   >
-                    Registracia
+                    Регистрация
                   </Link>
                   <Link
                     to='./auth'
                     className='desktopOnly'
                   >
-                    <Button>Kirish</Button>
+                    <Button>Вход</Button>
                   </Link>
                   {/* language switcher */}
                 </div>

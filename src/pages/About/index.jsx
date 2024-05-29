@@ -13,13 +13,13 @@ const AboutPage = () => {
       <div className='container'>
         <PagesIntro
           introIcon='icon-notebookBookmark'
-          introTitle='Biz Hakimizda'
-          introText='We value your feedback, questions, and concerns at Nutritionist. Our dedicated team is here to assist you and provide the support you need on your nutritional journey. Please do not hesitate to reach out to us using any of the following contact methods'
+          introTitle='О нас'
+          introText='Мы всегда открыты к вашим предложением для совершенствования нашей платформы. Наша задача сделать процесс обучения комфортным и интересным.'
         ></PagesIntro>
         <div className='aboutPageContainer'>
           <AboutCard
-            title='Pro Skill kompaniya haqida'
-            text='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt utlabore et dolore magna aliqua. Ut enum ad minim veniam, quis nostrudLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt utlabore et dolore magna aliqua. Ut enum ad minim veniam, quis nostrud'
+            title='Компания Pro Skill'
+            text='Мы представляем собой современную образовательную платформу, предоставляющую доступ современным и востребованным профессиям. Основное преимущество нашей компании заключается в гибкости и удобстве: обучаться можно в любое время и в любом месте, что особенно важно в условиях современной занятости.'
             image={cardAboutInfo1}
           />
           <video
@@ -35,16 +35,16 @@ const AboutPage = () => {
           </video>
           <Achivements />
           <AboutCard
-            title='Bizning vazifamiz'
-            text='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt utlabore et dolore magna aliqua. Ut enum ad minim veniam, quis nostrudLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt utlabore et dolore magna aliqua. Ut enum ad minim veniam, quis nostrud'
+            title='Наша миссия'
+            text='Эти достижения являются результатом слаженной работы нашей команды профессионалов, которая стремится к постоянному улучшению и удовлетворению потребностей наших клиентов. Мы гордимся достигнутым и нацелены на дальнейшее развитие и успех.'
             image={cardAboutInfo2}
             className='infoReverse'
           />
-          <AboutCard
+          {/* <AboutCard
             title='Bizning vazifamiz'
             text='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt utlabore et dolore magna aliqua. Ut enum ad minim veniam, quis nostrudLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt utlabore et dolore magna aliqua. Ut enum ad minim veniam, quis nostrud'
             image={cardAboutInfo3}
-          />
+          /> */}
         </div>
       </div>
     </div>

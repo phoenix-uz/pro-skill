@@ -13,14 +13,15 @@ const OurTeachers = () => {
       id: 1,
       img: firstTutor,
       alt: "firstTutor",
-      name: "Jane Cooper",
+      name: "Мишина Людмила",
       text: "Lorem ipsum dolor sit amet, consectetur adipising elit, sed do eiusmod tempor",
+      text: "Бизнес-тренер по продажам, переговорам, управлению персоналом В продажах с 2007 года В обучении и развитии специалистов с 2012 года",
     },
     {
       id: 2,
       img: secondTutor,
       alt: "secondTutor",
-      name: "Jane Cooper",
+      name: "Jane Cooper ",
       text: "Lorem ipsum dolor sit amet, consectetur adipising elit, sed do eiusmod tempor",
     },
     {
@@ -40,7 +41,7 @@ const OurTeachers = () => {
         <div className='learnMore'>
           <Link
             className='link'
-            to='./library'
+            to='/library'
           >
             Batafsil
           </Link>
@@ -71,14 +72,14 @@ const OurTeachers = () => {
                   to='/payment'
                   className='cardBtn'
                 >
-                  <Button> Kurs sotib olish</Button>
+                  <Button> Приобрести курс</Button>
                 </Link>
               ) : (
                 <Link
                   to='/auth'
                   className='cardBtn'
                 >
-                  <Button> Kurs sotib olish</Button>
+                  <Button> Приобрести курс</Button>
                 </Link>
               )}
             </div>
@@ -90,7 +91,7 @@ const OurTeachers = () => {
             className='skrollContent'
           >
             <div className='skrollTitle'>
-              <h3 className='title'>Maqsadlaringizga Pro Skill bilan erishing</h3>
+              <h3 className='title'>Достигайте своих целей вместе с</h3>
             </div>
             <div className='skrollText'>
               <span className='text'>Proskill</span>

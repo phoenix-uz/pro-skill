@@ -27,7 +27,7 @@ const PaymentOtp = () => {
 
   const handleSubmit = () => {
     dispatch(sendPaymentOtp(otp));
-    navigate(`/`);
+    window.location.herf = "https://proskill-academy.net/";
   };
   return (
     <div className='paymentOtp'>

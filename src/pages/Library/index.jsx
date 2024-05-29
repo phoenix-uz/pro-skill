@@ -87,7 +87,7 @@ const LibraryPage = () => {
               contentText={item.title}
               totalIcon='icon-Folder-With-Files'
               totalNumber={`${item.length} sahifalar`}
-              btnText={!Cookies.get("access_token") ? "Kutubhonaga otish" : `${item.price} ball`}
+              btnText={!Cookies.get("access_token") ? "Приобрести курс" : `${item.price} балов`}
               infoTitle={item.author}
               infoText={item.subtitle}
             />
@@ -103,7 +103,7 @@ const LibraryPage = () => {
         <div className='libraryPageContainer'>
           <PagesIntro
             introIcon='icon-Notebook'
-            introTitle='Kutubhona'
+            introTitle='Библиотека'
             introText='Нет пределу совершенству, стремитесь стать лучшим в своем деле, а наша постоянно пополняемая библиотека вам в это поможет.'
           >
             <Quote
@@ -163,10 +163,10 @@ const LibraryPage = () => {
                               totalNumber={`${item.length} sahifalar`}
                               btnText={
                                 !Cookies.get("access_token")
-                                  ? "Kutubhonaga otish"
-                                  : profileData?.purchases.some((purchasedItem) => purchasedItem.itemId == item.id)
-                                  ? "Already bought"
-                                  : `${item.price} ball`
+                                  ? "Приобрести курс"
+                                  : profileData?.purchases?.some((purchasedItem) => purchasedItem.itemId == item.id)
+                                  ? "Уже куплена"
+                                  : `${item.price} балов`
                               }
                               infoTitle={item.author}
                               infoText={item.subtitle}
@@ -187,7 +187,7 @@ const LibraryPage = () => {
                         )}
                         {typeItem?.items?.length > 4 && (
                           <div className='libraryBtn'>
-                            <Button onClick={() => filterByBookName(index)}>More</Button>
+                            <Button onClick={() => filterByBookName(index)}>Больше</Button>
                           </div>
                         )}
                       </div>

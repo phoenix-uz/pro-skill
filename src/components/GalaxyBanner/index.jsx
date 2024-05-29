@@ -28,14 +28,14 @@ const GalaxyBanner = () => {
     { id: 8, dataContent: "content8", style: { "--i": 8 }, img: eightGalaxyUser, alt: "content8" },
   ];
   const lineBoxContent = [
-    { id: 1, dataContent: "content1", img: firstGalaxyUser, alt: "content1", text: "Hey, I'm Joge" },
-    { id: 2, dataContent: "content2", img: secondGalaxyUser, alt: "content2", text: "Hey, I'm Alexa" },
-    { id: 3, dataContent: "content3", img: thirdGalaxyUser, alt: "content3", text: "Hey, I'm Anna" },
-    { id: 4, dataContent: "content4", img: forthGalaxyUser, alt: "content4", text: "Hey, I'm Sam" },
-    { id: 5, dataContent: "content5", img: fithGalaxyUser, alt: "content5", text: "Hey, I'm Susana" },
-    { id: 6, dataContent: "content6", img: sixthGalaxyUser, alt: "content6", text: "Hey, I'm Sam" },
-    { id: 7, dataContent: "content7", img: sevenGalaxyUser, alt: "content7", text: "Hey, I'm Susana" },
-    { id: 8, dataContent: "content8", img: eightGalaxyUser, alt: "content8", text: "Hey, I'm Anna" },
+    { id: 1, dataContent: "content1", img: firstGalaxyUser, alt: "content1", text: "Привет, я Дамир" },
+    { id: 2, dataContent: "content2", img: secondGalaxyUser, alt: "content2", text: "Привет, я Эльвира" },
+    { id: 3, dataContent: "content3", img: thirdGalaxyUser, alt: "content3", text: "Привет, я Людмила" },
+    { id: 4, dataContent: "content4", img: forthGalaxyUser, alt: "content4", text: "Привет, я Анастасия" },
+    { id: 5, dataContent: "content5", img: fithGalaxyUser, alt: "content5", text: "Привет, я Рустам" },
+    { id: 6, dataContent: "content6", img: sixthGalaxyUser, alt: "content6", text: "Привет, я Александра" },
+    { id: 7, dataContent: "content7", img: sevenGalaxyUser, alt: "content7", text: "Привет, я Екатерина" },
+    { id: 8, dataContent: "content8", img: eightGalaxyUser, alt: "content8", text: "Привет, я Махмуд" },
   ];
 
   return (

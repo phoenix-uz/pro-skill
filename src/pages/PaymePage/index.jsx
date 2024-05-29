@@ -45,7 +45,7 @@ const PaymePage = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     dispatch(paymePaymentData(cardData));
-    navigate(`/paymentOtp`);
+    navigate(`/paymeOtp`);
     setCardData({
       cardNumber: "",
       expireDate: "",
@@ -57,7 +57,7 @@ const PaymePage = () => {
         <div className='paymeContainer'>
           <PagesIntro
             introIcon='icon-Notebook'
-            introTitle='Tolov'
+            introTitle='Оплата'
             introText="We value your feedback, questions, and concerns at Nutritionist. Our dedicated team is here to assist you and provide the support you need on your nutritional journey. Please don't hesitate to reach out to us using any of the following contact methods"
           />
           <div className='paymeBox'>

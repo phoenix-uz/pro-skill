@@ -16,7 +16,7 @@ const OurApproach = () => {
               />
               <div className='mainHeading'>
                 <h2 className='heading'>
-                  <span className='primary'>O'rganishga</span> bizning yondashuvimiz
+                  <span className='primary'>Наш подход к обучению</span>
                 </h2>
               </div>
             </div>

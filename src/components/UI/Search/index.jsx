@@ -21,7 +21,7 @@ const Search = () => {
         type='search'
         value={searchQuery}
         onChange={(e) => setSearchQuery(e.target.value)}
-        placeholder='search'
+        placeholder='Поиск'
       />
     </div>
   );

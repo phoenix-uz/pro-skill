@@ -14,7 +14,7 @@ const PaymentPage = () => {
         <div className='paymentPageContainer'>
           <PagesIntro
             introIcon='icon-Notebook'
-            introTitle='Tolov'
+            introTitle='Оплата'
             introText='We value your feedback, questions, and concerns at Nutritionist. Our dedicated team is here to assist you and provide the support you need on your nutritional journey. Please do not hesitate to reach out to us using any of the following contact methods'
           ></PagesIntro>
           <div className='paymentBox'>

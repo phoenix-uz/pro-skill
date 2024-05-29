@@ -94,7 +94,7 @@ const Price = () => {
                     to='/auth'
                     className='cardBtn'
                   >
-                    <Button>Sotib olish</Button>
+                    <Button>Приобрести курс</Button>
                   </Link>
                 )}
               </div>

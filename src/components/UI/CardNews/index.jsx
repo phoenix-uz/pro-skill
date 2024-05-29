@@ -2,8 +2,9 @@ import React from "react";
 import "./styles.sass";
 import Button from "../Button";
 import imageNews from "../../../assets/images/news.png";
+import { Link } from "react-router-dom";
 
-const CardNews = () => {
+const CardNews = ({ title, content, link }) => {
   return (
     <div className='cardNews'>
       <div className='cardNewsContainer'>
@@ -16,17 +17,17 @@ const CardNews = () => {
         </div>
         <div className='cardInfo'>
           <div className='infoTitle'>
-            <h4 className='title'>Новость</h4>
+            <h4 className='title'>{title}</h4>
           </div>
           <div className='infoText'>
-            <p className='text'>
-              Things move quickly in the mobile app universe. To succeed in the field of mobile UX design, designers
-              must have the foresight and prepare for new challenges around the corner
-            </p>
+            <p className='text'>{content}</p>
           </div>
-          <div className='infoBtn'>
-            <Button>batafsil</Button>
-          </div>
+          <Link
+            className='infoBtn'
+            to={link}
+          >
+            <Button>Далее</Button>
+          </Link>
         </div>
       </div>
     </div>

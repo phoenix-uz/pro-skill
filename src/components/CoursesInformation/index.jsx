@@ -13,25 +13,26 @@ const CoursesInformation = () => {
           <div className='coursesInfo'>
             <div className='infoHeader'>
               <div className='sectionTitleBlack'>
-                <h3 className='title'>Online Video Courslar</h3>
+                <h3 className='title'>Современный подход к обучению</h3>
               </div>
-              <div className='sectionSubtitle'>
+              {/* <div className='sectionSubtitle'>
                 <p className='subtitle'>We provide the best service that comes with the best results.</p>
-              </div>
+              </div> */}
             </div>
             <div className='infoBody'>
               <div className='bodyBlock'>
                 <div className='blockTitle'>
-                  <h3 className='title'>Bepul Video Courslar</h3>
+                  <h3 className='title'>Людмила Мишина</h3>
                 </div>
                 <div className='blockText'>
                   <p className='text'>
-                    These courses are designed to help people learn new skills or improve existing ones through a series
-                    of video lectures, interactive activities, and assessments.
+                    Коллеги и клиенты говорят обо мне: «тренер с огоньком». Помогаю зажечь огонь вдохновения к продажам,
+                    управлению продажами, обучению продажам В три шага: Убрать барьеры, Найти свое вдохновение,
+                    Сформировать навык для кратного увеличения продаж в состоянии потока (в среднем в 2 раза)
                   </p>
                 </div>
               </div>
-              <div className='bodyBlock'>
+              {/* <div className='bodyBlock'>
                 <div className='blockTitle'>
                   <h3 className='title'>Bepul Video Courslar</h3>
                 </div>
@@ -41,13 +42,13 @@ const CoursesInformation = () => {
                     of video lectures, interactive activities, and assessments.
                   </p>
                 </div>
-              </div>
+              </div> */}
             </div>
             <Link
               to='/courses/1'
               className='inforFooter'
             >
-              <Button>Kurslar</Button>
+              <Button>Курсы</Button>
             </Link>
           </div>
           <div className='coursesImagesGroup'>

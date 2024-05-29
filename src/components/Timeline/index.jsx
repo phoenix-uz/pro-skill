@@ -6,7 +6,7 @@ const Timeline = () => {
     <section className='timeline'>
       <div className='container'>
         <div className='sectionTitleBlack'>
-          <h3 className='title'>O'quv jarayoni</h3>
+          <h3 className='title'>Процесс обучения</h3>
         </div>
         <div className='timelineItems'>
           <div className='timelineItem'>

@@ -12,14 +12,13 @@ const ContactsBlock = () => {
           <div className='content'>
             <div className='contentInfo'>
               <div className='contentTitle'>
-                <h2 className='title'>Contact Us</h2>
+                <h2 className='title'>Свяжитесь с нами</h2>
               </div>
-              <div className='contentText'>
+              {/* <div className='contentText'>
                 <p className='text'>
-                  Если у вас остались вопросы, или хотите больше узнать о ProSkill, оставьте заявку — и мы вам
-                  перезвоним.
+                  
                 </p>
-              </div>
+              </div> */}
             </div>
             <div className='box'>
               <div className='contactInfo'>

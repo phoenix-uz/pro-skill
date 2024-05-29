@@ -22,12 +22,12 @@ const PaymeOtp = () => {
     [filled],
   );
   useEffect(() => {
-    if (isPurchesed) navigate("/");
+    if (isPurchesed) window.location.herf = "https://proskill-academy.net/";
   }, [isPurchesed]);
 
   const handleSubmit = () => {
     dispatch(sendPaymePaymentOtp(otp));
-    navigate(`/`);
+    window.location.herf = "https://proskill-academy.net/";
   };
   return (
     <div className='paymeOtp'>

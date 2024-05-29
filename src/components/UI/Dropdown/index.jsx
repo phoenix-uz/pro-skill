@@ -33,7 +33,7 @@ const DropdownWithSelect = ({ selectedOptions, setSelectedOptions }) => {
             <i className='icon-Notebook'></i>
           </div>
 
-          {isOpen ? "Ball boyicha filtrlash" : "Ball boyicha filtrlash"}
+          {isOpen ? "Поиск по балам" : "Поиск по балам"}
           <div className={`dropdownIcon ${isOpen ? "activeIcon" : ""}`}>
             <i className='icon-arrow-right2'></i>
           </div>

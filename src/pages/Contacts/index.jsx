@@ -12,8 +12,8 @@ const ContactsPage = () => {
         <div className='contactsPageContainer'>
           <PagesIntro
             introIcon='icon-Play'
-            introTitle='Kontaktlar'
-            introText='We value your feedback, questions, and concerns at Nutritionist. Our dedicated team is here to assist you and provide the support you need on your nutritional journey. Please do not hesitate to reach out to us using any of the following contact methods'
+            introTitle='Контакты'
+            introText='Если у вас остались вопросы, или хотите больше узнать о ProSkill, оставьте заявку — и мы вам перезвоним.'
           ></PagesIntro>
           <div className='contactsPageItems'>
             <div className='contactItem'>

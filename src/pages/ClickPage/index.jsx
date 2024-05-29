@@ -44,7 +44,7 @@ const ClickPage = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     dispatch(clickPaymentData(cardData));
-    navigate(`/paymeOtp`);
+    navigate(`/paymentOtp`);
     setCardData({
       cardNumber: "",
       expireDate: "",
@@ -68,7 +68,7 @@ const ClickPage = () => {
                 />
               </div>
               <div className='totalAmount'>
-                <div className='amountText'>To'lov miqdori:</div>
+                <div className='amountText'>Цена:</div>
                 <div className='amount'>{price}</div>
               </div>
             </div>
@@ -85,7 +85,7 @@ const ClickPage = () => {
                     className='label'
                     htmlFor='nomer'
                   >
-                    Karta nomer
+                    Номер карты
                   </label>
                   <IMaskInput
                     name='cardNumber'
@@ -103,7 +103,7 @@ const ClickPage = () => {
                     className='label'
                     htmlFor='Muddat'
                   >
-                    Muddat
+                    Срок истечения
                   </label>
                   <IMaskInput
                     name='expireDate'
@@ -117,7 +117,7 @@ const ClickPage = () => {
                   />
                 </div>
               </div>
-              <Button>Byu</Button>
+              <Button>Купить</Button>
             </form>
           </div>
         </div>

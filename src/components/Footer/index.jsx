@@ -24,7 +24,7 @@ const Footer = () => {
                     </Link>
                   </div>
                   <div className='footerText'>
-                    <p className='text'>the quick fox jumps over the lazy dog</p>
+                    <p className='text'>Быстрая лиса перепрыгивает через ленивую собаку</p>
                   </div>
                   <div className='footerIcons'>
                     <Link
@@ -55,57 +55,57 @@ const Footer = () => {
                 </div>
                 <div className='footerItem'>
                   <div className='itemTitle'>
-                    <h4 className='title'>Online kurslar</h4>
+                    <h4 className='title'>Онлайн курсы</h4>
                   </div>
                   <div className='itemLinks'>
                     <Link
                       to='/about'
                       className='link'
                     >
-                      Biz hakimizda
+                      О нас
                     </Link>
                     <Link
                       to='/library'
                       className='link'
                     >
-                      Kutubhona
+                      Библиотека
                     </Link>
                     <Link
                       to='/news'
                       className='link'
                     >
-                      Yangiliklar
+                      Новости
                     </Link>
                     <Link
                       to='/courses/1'
                       className='link'
                     >
-                      Kurs
+                      Курсы
                     </Link>
                   </div>
                 </div>
                 <div className='footerItem'>
                   <div className='itemTitle'>
-                    <h4 className='title'>Xususiyatlar</h4>
+                    <h4 className='title'>Функции</h4>
                   </div>
                   <div className='itemLinks'>
                     <Link
                       to=''
                       className='link'
                     >
-                      Sotish boyicha menedger
+                      Менеджер по продажам
                     </Link>
                     <Link
                       to=''
                       className='link'
                     >
-                      Biz bilan boglanish
+                      Связаться с нами
                     </Link>
                   </div>
                 </div>
                 <div className='footerItem'>
                   <div className='itemTitle'>
-                    <h4 className='title'>Kontakt</h4>
+                    <h4 className='title'>Контакты</h4>
                   </div>
                   <div className='itemLinks'>
                     <Link

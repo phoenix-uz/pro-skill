@@ -30,12 +30,11 @@ const ContactsForm = () => {
         onSubmit={handleSubmit}
       >
         <div className='formTitle'>
-          <h2 className='title'>SMS Yozing</h2>
+          <h2 className='title'>Отправьте нам сообщение</h2>
         </div>
         <div className='formSubtitle'>
           <p className='subTitle'>
-            Have a specific inquiry or message for us? Please use the contact form below, and we'll get back to you
-            promptlyHave a specific
+            Если у вас остались вопросы, или хотите больше узнать о ProSkill, оставьте заявку — и мы вам перезвоним.
           </p>
         </div>
         <div className='inputBox'>
@@ -46,7 +45,7 @@ const ContactsForm = () => {
             value={formData.name}
             onChange={handleForm}
           />
-          <span>Ism</span>
+          <span>Имя</span>
         </div>
         <div className='inputBox'>
           <input
@@ -56,7 +55,7 @@ const ContactsForm = () => {
             value={formData.surname}
             onChange={handleForm}
           />
-          <span>Familiya</span>
+          <span>Фамилия</span>
         </div>
         <div className='inputBox'>
           <IMaskInput
@@ -66,7 +65,7 @@ const ContactsForm = () => {
             onChange={handleForm}
             required
           />
-          <span>Telefon raqam</span>
+          <span>Номер телефона</span>
         </div>
         <div className='inputBox'>
           <textarea
@@ -75,10 +74,10 @@ const ContactsForm = () => {
             onChange={handleForm}
             required
           ></textarea>
-          <span>Sms</span>
+          <span>Ваше сообщение</span>
         </div>
         <div className='formBtn'>
-          <Button>Yuborish</Button>
+          <Button>Отправить</Button>
         </div>
       </form>
     </div>

@@ -31,7 +31,7 @@ const Benefits = () => {
         <div className='benefitsContainer'>
           <div className='benefitsIformation'>
             <div className='benefitsHeading'>
-              <h2 className='heading'>Biz bilan ishlashning afzalliklari</h2>
+              <h2 className='heading'>Преимущества работы с нами</h2>
             </div>
             <div className='benefitsText'>
               <p className='text'>
@@ -54,7 +54,7 @@ const Benefits = () => {
                 className='outline'
                 onClick={openModal}
               >
-                Testdan otish
+                Пройти тест
               </Button>
               {isModalOpen && <TextModalBox onClick={closeModal} />}
             </div>
@@ -67,8 +67,8 @@ const Benefits = () => {
               <BenefitsCard
                 icon='icon-pen'
                 title='Преподаватели '
-                text='Только лучшие в своем деле!
-                (первая карточка обратная сторона)
+                textFront='Только лучшие в своем деле!'
+                textBack='
                 За плечами у наших преподавателей многолетний опыт работы и оточенные профессиональные навыки'
               />
             </div>
@@ -76,15 +76,15 @@ const Benefits = () => {
               <BenefitsCard
                 icon='icon-medal'
                 title='Знания'
-                text='Доступ к ресурсам в любое время.
-                (вторая карточка обратная сторона)
+                textFront='Доступ к ресурсам в любое время.'
+                textBack='
                 Онлайн-библиотека с более, чем 100+ книг по продажам, маркетингу и психологии. Мы собрали видео-нарезки, новости и  статьи со всего интернета.'
               />
               <BenefitsCard
                 icon='icon-shield'
                 title='Трудоустройство'
-                text='Сможете попробовать себя в новой профессии
-                (вторая карточка обратная сторона)
+                textFront='Сможете попробовать себя в новой профессии'
+                textBack='
                 После успешного прохождения нашего курса, мы гарантируем трудоустройство, где вы сможете подкрепить полученные знания, практикой.'
               />
             </div>
