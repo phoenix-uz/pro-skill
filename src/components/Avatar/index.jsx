@@ -91,7 +91,7 @@ const Avatar = () => {
               className='text'
             >
               <span className='plus'>+ </span>
-              {random(400, 450)} people online <i className='icon-arrow-right2'></i>
+              {random(400, 450)} людей онлайн <i className='icon-arrow-right2'></i>
             </Link>
           </div>
         </div>

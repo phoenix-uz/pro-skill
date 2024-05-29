@@ -71,7 +71,7 @@ const DropdownWithSelect = ({ selectedOptions, setSelectedOptions }) => {
               htmlFor='40'
               id='40'
               value='40,10000000000000'
-              option="40 va ko'proq Ball"
+              option='40 и более'
               isChecked={isChecked("40,10000000000000")}
               onChange={(event) => handleOptionChange(event)}
             />

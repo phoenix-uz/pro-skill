@@ -10,7 +10,7 @@ const Quote = ({ name, text }) => {
             <h4 className='name'>{name}</h4>
           </div>
           <div className='quoteLabel'>
-            <p className='label'>Kun iqtibos</p>
+            <p className='label'>Цитата дня</p>
           </div>
         </div>
         <div className='quoteRole'>

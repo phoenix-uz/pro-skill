@@ -5,7 +5,7 @@ import { clickPaymentData } from "../../store/clickPaymentSlice";
 import { useNavigate } from "react-router-dom";
 import PagesIntro from "../../components/UI/PagesIntro";
 import Button from "../../components/UI/Button";
-import ClickImage from "../../assets/images/click.png";
+import ClickImage from "../../assets/images/Click.png";
 import Cookies from "js-cookie";
 import "./styles.sass";
 
@@ -77,7 +77,7 @@ const ClickPage = () => {
               onSubmit={handleSubmit}
             >
               <div className='formTitle'>
-                <h3 className='title'>Ro'yxatdan holda to'lov</h3>
+                <h3 className='title'>Оплата без регистрации</h3>
               </div>
               <div className='formBox'>
                 <div className='inputBox'>

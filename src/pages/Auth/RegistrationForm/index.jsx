@@ -78,7 +78,7 @@ const RegistrationForm = () => {
   return (
     <div className='formContainer'>
       <div className='formTitle'>
-        <h4 className='title'>Royxatan otish</h4>
+        <h4 className='title'>Зарегистрироваться</h4>
       </div>
       <form
         action=''
@@ -102,7 +102,7 @@ const RegistrationForm = () => {
             type='text'
             name='city'
             className='input'
-            placeholder='Shahar'
+            placeholder='Улица'
             value={registrationData.city}
             // onChange={(e) => setRegistrationData({ ...registrationData, city: e.target.value })}
             onChange={handleChange}
@@ -114,7 +114,7 @@ const RegistrationForm = () => {
             type='text'
             name='email'
             className='input'
-            placeholder='Pochta'
+            placeholder='Почта'
             value={registrationData.email}
             // onChange={(e) => setRegistrationData({ ...registrationData, email: e.target.value })}
             onChange={handleChange}
@@ -125,7 +125,7 @@ const RegistrationForm = () => {
           <IMaskInput
             name='phoneNumber'
             className='input'
-            placeholder='Telefon nomer'
+            placeholder='Номер телефона'
             value={registrationData.phoneNumber}
             // onChange={(e) => setRegistrationData({ ...registrationData, phoneNumber: e.target.value })}
             onChange={handleChange}
@@ -136,7 +136,7 @@ const RegistrationForm = () => {
         <div className='inputBox'>
           <Input
             type='password'
-            placeholder='Parol'
+            placeholder='Пароль'
             className='input'
             name='password'
             value={registrationData.password}
@@ -148,7 +148,7 @@ const RegistrationForm = () => {
         <div className='inputBox'>
           <Input
             type='password'
-            placeholder='Parolni tastiqlang'
+            placeholder='Повторите пароль'
             className='input'
             name='repeatPassword'
             value={registrationData.repeatPassword}
@@ -160,7 +160,7 @@ const RegistrationForm = () => {
           className={!isFormValid() ? "disabled" : ""}
           disabled={!isFormValid()}
         >
-          Kirish
+          Вход
         </Button>
       </form>
       <div className='formLink'>

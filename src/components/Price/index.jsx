@@ -87,7 +87,7 @@ const Price = () => {
                     to='/payment'
                     className='cardBtn'
                   >
-                    <Button onClick={() => handleCourseName(item.name)}>Sotib olish</Button>
+                    <Button onClick={() => handleCourseName(item.name)}>Покупка</Button>
                   </Link>
                 ) : (
                   <Link

@@ -37,7 +37,7 @@ const LogInForm = () => {
   return (
     <div className='formContainer'>
       <div className='formTitle'>
-        <h4 className='title'>Kirish</h4>
+        <h4 className='title'>Вход</h4>
       </div>
       <form
         action=''
@@ -66,7 +66,7 @@ const LogInForm = () => {
             required
           />
         </div>
-        <Button>Kirish</Button>
+        <Button>Вход</Button>
       </form>
       <div className='formLink'>
         {/* <Link to='logIn' */}

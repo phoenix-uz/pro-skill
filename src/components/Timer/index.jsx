@@ -51,7 +51,7 @@ const Timer = () => {
 
   return (
     <div className='verificationTime'>
-      <p className='text'>"Keyingi urinish" {timer}</p>
+      <p className='text'>"Следующая попытка" {timer}</p>
     </div>
   );
 };

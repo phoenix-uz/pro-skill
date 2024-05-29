@@ -35,15 +35,15 @@ const PaymentOtp = () => {
         <div className='otpContainer'>
           <div className='otpHeader'>
             <div className='headerTitle'>
-              <h3 className='title'>Sms kod tasdiqlash talab etiladi</h3>
+              <h3 className='title'>Требуется подтверждение кода по СМС</h3>
             </div>
             <div className='headerSubtitle'>
-              <p className='subtitle'>Tasdiqlash kodi elektron xatga yuborildi</p>
+              <p className='subtitle'>Код подтверждения был отправлен на вашу электронную почту</p>
             </div>
           </div>
           <div className='otpBody'>
             <div className='bodyTitle'>
-              <h4 className='title'>SMS kodni kiriting</h4>
+              <h4 className='title'>Введите СМС-код</h4>
             </div>
             <form
               action=''
@@ -60,9 +60,9 @@ const PaymentOtp = () => {
               </div>
               <div className='btnGroup'>
                 <Link to='/auth'>
-                  <Button className='outline'>Orqaga</Button>
+                  <Button className='outline'>Назад</Button>
                 </Link>
-                <Button>Tastiqlash</Button>
+                <Button>Подтверждение</Button>
               </div>
             </form>
           </div>
@@ -71,7 +71,7 @@ const PaymentOtp = () => {
               <Timer />
             </div>
             <div className='footerText'>
-              <p className='text'>Kodni qayta yuborish</p>
+              <p className='text'>Отправить код повторно</p>
             </div>
           </div>
         </div>

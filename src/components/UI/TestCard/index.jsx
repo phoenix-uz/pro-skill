@@ -88,9 +88,9 @@ const TestCard = ({ onClick }) => {
               </div>
             </div>
             {currentCardIndex < tests.length - 1 ? (
-              <Button onClick={handleNextCard}>Kengisi</Button>
+              <Button onClick={handleNextCard}>Следущий</Button>
             ) : (
-              <Button onClick={handleSubmit}>submit</Button>
+              <Button onClick={handleSubmit}>Сдать</Button>
             )}
           </div>
         </div>
@@ -119,20 +119,20 @@ const TestCard = ({ onClick }) => {
                 />
               </div>
               <div className='cardTitle'>
-                <h3 className='title'>Siz testdan muvaffaqiyatli otdingiz!</h3>
+                <h3 className='title'>Вы прошли тест!</h3>
               </div>
               <div className='cardText'>
-                <p className='text'>Natijalaringiz</p>
+                <p className='text'>Ваши результаты</p>
               </div>
               <div className='cardTextFinishBox'>
                 <div className='boxTextContainer'>
                   <div className='boxTitle'>
-                    <h4 className='title'>Sotuv boyicha menejeri</h4>
+                    <h4 className='title'>Менеджер по продажам</h4>
                   </div>
                   <div className='boxText'>
                     <p className='text'>
-                      Learn the fundamentals of web design, including HTML, CSS, and responsive design principles.
-                      Develop the skills to create visually appealing and user-friendly websites.
+                      Изучите основы веб-дизайна, включая HTML, CSS и принципы адаптивного дизайна. Развивайте навыки
+                      создания визуально привлекательных и удобных для пользователя веб-сайтов.
                     </p>
                   </div>
                 </div>

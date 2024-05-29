@@ -69,7 +69,7 @@ const PaymePage = () => {
                 />
               </div>
               <div className='totalAmount'>
-                <div className='amountText'>To'lov miqdori:</div>
+                <div className='amountText'>К оплате:</div>
                 <div className='amount'>{price}</div>
               </div>
             </div>
@@ -78,7 +78,7 @@ const PaymePage = () => {
               onSubmit={handleSubmit}
             >
               <div className='formTitle'>
-                <h3 className='title'>Ro'yxatdan holda to'lov</h3>
+                <h3 className='title'>Оплата без регистрации</h3>
               </div>
               <div className='formBox'>
                 <div className='inputBox'>
@@ -118,7 +118,7 @@ const PaymePage = () => {
                   />
                 </div>
               </div>
-              <Button>Byu</Button>
+              <Button>Купить</Button>
             </form>
           </div>
         </div>

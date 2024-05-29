@@ -59,7 +59,7 @@ const AuthPage = () => {
       <div className='container'>
         <div className='authPageContainer'>
           <div className='authPageImage'>
-            <p className='text'>Hush Kelibsiz!</p>
+            <p className='text'>Добро пожаловать!</p>
             <img
               src={authImage}
               alt='authImage'

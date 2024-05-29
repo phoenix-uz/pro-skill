@@ -68,7 +68,7 @@ const CoursesInformation = () => {
                 />
               </div>
               <div className='glass'>
-                <h3 className='title'>The best cmm manager</h3>
+                <h3 className='title'>Лучший смм менеджер</h3>
               </div>
             </div>
           </div>

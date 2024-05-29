@@ -29,7 +29,7 @@ const ContactsPage = () => {
               </div>
               <div className='contactsMessangers'>
                 <div className='messangersTitle'>
-                  <div className='title'>Biz bilan bog'lanish:</div>
+                  <div className='title'>Связаться с нами:</div>
                 </div>
                 <div className='messangers'>
                   <Link className='icon'>

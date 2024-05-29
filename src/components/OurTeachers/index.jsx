@@ -36,14 +36,14 @@ const OurTeachers = () => {
     <section className='teachers'>
       <div className='container'>
         <div className='sectionTitleBlack'>
-          <h3 className='title'>Bizning o'qituvchilarimiz</h3>
+          <h3 className='title'>Наши учителя</h3>
         </div>
         <div className='learnMore'>
           <Link
             className='link'
             to='/library'
           >
-            Batafsil
+            Библиотека
           </Link>
         </div>
         <div className='cardsContainer'>

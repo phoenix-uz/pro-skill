@@ -29,11 +29,11 @@ const Intro = () => {
               <div className='totalAmountContainer'>
                 <div className='total line'>
                   <div className='totalNumber'>700</div>
-                  <div className='text'>bizning talabalarimiz</div>
+                  <div className='text'>наши студенты</div>
                 </div>
                 <div className='total'>
                   <div className='totalNumber'>30</div>
-                  <div className='text'>o'qituvchilar</div>
+                  <div className='text'>учителя</div>
                 </div>
               </div>
             </div>

@@ -6,7 +6,7 @@ const Rights = () => {
   return (
     <div className='rights'>
       <div className='rightsText'>
-        <p className='text'>© 2024 Proskill Powered by </p>
+        <p className='text'>© 2024 все права защищены Proskill </p>
       </div>
       <div className='rightsImage'>
         <img

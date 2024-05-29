@@ -4,7 +4,7 @@ import TestCard from "../../components/UI/TestCard";
 import PagesIntro from "../../components/UI/PagesIntro";
 import { Link } from "react-router-dom";
 import payme from "../../assets/images/payme.png";
-import click from "../../assets/images/click.png";
+import click from "../../assets/images/Click.png";
 import Button from "../../components/UI/Button";
 
 const PaymentPage = () => {
@@ -15,20 +15,20 @@ const PaymentPage = () => {
           <PagesIntro
             introIcon='icon-Notebook'
             introTitle='Оплата'
-            introText='We value your feedback, questions, and concerns at Nutritionist. Our dedicated team is here to assist you and provide the support you need on your nutritional journey. Please do not hesitate to reach out to us using any of the following contact methods'
+            // introText='We value your feedback, questions, and concerns at Nutritionist. Our dedicated team is here to assist you and provide the support you need on your nutritional journey. Please do not hesitate to reach out to us using any of the following contact methods'
           ></PagesIntro>
           <div className='paymentBox'>
             <div className='paymentText'>
               <div className='text'>
-                <strong>Diqqat. Ushbu hisob-fakturani to'lash xizmat ko'rsatish shartlariga rozilik bildiradi.</strong>
-                To'lov haqida xabar berish ixtiyoriy. Xizmatlar bizning bank hisobimizga mablag' kelib tushgandan so'ng
-                taqdim etiladi. Xizmatni taqdim etgandan so'ng, biz sizning q.wert.y_1111@gmail.com elektron pochta
-                manzilingizga bu haqda bildirishnoma yuboramiz.
+                <strong>Внимание. Оплата этого счета означает согласие с условиями обслуживания.</strong>
+                Уведомление об оплате является необязательным. Услуги предоставляются при поступлении денежных средств
+                на наш банковский счет. предоставлен. После оказания услуги мы отправим вам электронное письмо на адрес
+                q.wert.y_1111@gmail.com. Мы отправим уведомление на ваш адрес.
               </div>
             </div>
             <div className='payment'>
               <div className='paymentTitle'>
-                <h4 className='title'>To'lov usulini tanlang:</h4>
+                <h4 className='title'>Выберите способ оплаты:</h4>
               </div>
               <div className='paymentBtns'>
                 <Link

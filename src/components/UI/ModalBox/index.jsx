@@ -9,7 +9,7 @@ const ModalBox = ({ cancel, purchase, bookData }) => {
         <div className='modalBoxContainer'>
           <div className='modalBoxTitle'>
             <h3 className='title'>
-              Are you sure you wanna buy "{bookData.title}" for {bookData.price}?
+              Вы уверены, что хотите купить "{bookData.title}" за {bookData.price}?
             </h3>
           </div>
 
@@ -18,9 +18,9 @@ const ModalBox = ({ cancel, purchase, bookData }) => {
               className='error'
               onClick={cancel}
             >
-              No
+              нет
             </Button>
-            <Button onClick={purchase}>Yes</Button>
+            <Button onClick={purchase}>да</Button>
           </div>
         </div>
       </div>

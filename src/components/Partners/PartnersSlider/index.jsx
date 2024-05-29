@@ -1,10 +1,10 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import zapier from "../../../assets/images/zapier.png";
-import spotify from "../../../assets/images/spotify.png";
-import zoom from "../../../assets/images/zoom.png";
-import amazon from "../../../assets/images/amazon.png";
-import adobe from "../../../assets/images/adobe.png";
+import click from "../../../assets/images/Click.png";
+import payme from "../../../assets/images/payme.png";
+import hamkor from "../../../assets/images/Hamkorbank.png";
+import ofb from "../../../assets/images/OFB.png";
+import uzum from "../../../assets/images/Uzum.png";
 import notion from "../../../assets/images/notion.png";
 import netflix from "../../../assets/images/netflix.png";
 import { Autoplay } from "swiper/modules";
@@ -13,13 +13,16 @@ import "./styles.sass";
 
 const PartnersSlider = () => {
   const PartnersSlideImages = [
-    { id: 1, img: zapier, alt: "zapier" },
-    { id: 2, img: spotify, alt: "spotify" },
-    { id: 3, img: zoom, alt: "zoom" },
-    { id: 4, img: amazon, alt: "amazon" },
-    { id: 5, img: adobe, alt: "adobe" },
-    { id: 6, img: notion, alt: "notion" },
-    { id: 7, img: netflix, alt: "netflix" },
+    { id: 1, img: click, alt: "click" },
+    { id: 2, img: payme, alt: "payme" },
+    { id: 3, img: hamkor, alt: "hamkor" },
+    { id: 4, img: ofb, alt: "ofb" },
+    { id: 5, img: uzum, alt: "uzum" },
+    { id: 1, img: click, alt: "click" },
+    { id: 2, img: payme, alt: "payme" },
+    { id: 3, img: hamkor, alt: "hamkor" },
+    { id: 4, img: ofb, alt: "ofb" },
+    { id: 5, img: uzum, alt: "uzum" },
   ];
 
   return (
@@ -56,6 +59,7 @@ const PartnersSlider = () => {
               <img
                 src={item.img}
                 alt={item.alt}
+                className='img'
               />
             </div>
           </SwiperSlide>
